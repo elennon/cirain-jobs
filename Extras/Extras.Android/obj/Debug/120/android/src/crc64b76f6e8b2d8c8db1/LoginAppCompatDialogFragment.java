@@ -18,8 +18,9 @@ public class LoginAppCompatDialogFragment
 	public LoginAppCompatDialogFragment ()
 	{
 		super ();
-		if (getClass () == LoginAppCompatDialogFragment.class)
+		if (getClass () == LoginAppCompatDialogFragment.class) {
 			mono.android.TypeManager.Activate ("Acr.UserDialogs.Fragments.LoginAppCompatDialogFragment, Acr.UserDialogs", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

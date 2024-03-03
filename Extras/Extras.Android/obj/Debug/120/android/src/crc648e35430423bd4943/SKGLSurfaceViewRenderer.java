@@ -22,8 +22,9 @@ public abstract class SKGLSurfaceViewRenderer
 	public SKGLSurfaceViewRenderer ()
 	{
 		super ();
-		if (getClass () == SKGLSurfaceViewRenderer.class)
+		if (getClass () == SKGLSurfaceViewRenderer.class) {
 			mono.android.TypeManager.Activate ("SkiaSharp.Views.Android.SKGLSurfaceViewRenderer, SkiaSharp.Views.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

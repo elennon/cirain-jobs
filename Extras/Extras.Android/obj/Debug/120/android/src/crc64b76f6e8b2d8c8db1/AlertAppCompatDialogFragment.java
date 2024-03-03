@@ -18,8 +18,9 @@ public class AlertAppCompatDialogFragment
 	public AlertAppCompatDialogFragment ()
 	{
 		super ();
-		if (getClass () == AlertAppCompatDialogFragment.class)
+		if (getClass () == AlertAppCompatDialogFragment.class) {
 			mono.android.TypeManager.Activate ("Acr.UserDialogs.Fragments.AlertAppCompatDialogFragment, Acr.UserDialogs", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

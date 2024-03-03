@@ -18,8 +18,9 @@ public class Tag
 	public Tag ()
 	{
 		super ();
-		if (getClass () == Tag.class)
+		if (getClass () == Tag.class) {
 			mono.android.TypeManager.Activate ("CarouselView.FormsPlugin.Droid.Tag, CarouselView.FormsPlugin.Droid", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

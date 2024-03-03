@@ -1,6 +1,7 @@
 ﻿
 using Extras.Views;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace Extras
 {
@@ -10,11 +11,11 @@ namespace Extras
         public AppShell()
         {
             InitializeComponent();
-
-            Routing.RegisterRoute(nameof(CloseUp), typeof(CloseUp));
-            Routing.RegisterRoute(nameof(ProjectsPage), typeof(ProjectsPage));
+            Routing.RegisterRoute(nameof(JobDetails), typeof(JobDetails));
+            Routing.RegisterRoute(nameof(Dashboard), typeof(Dashboard));
+            Routing.RegisterRoute(nameof(VeiwAll), typeof(VeiwAll));
             Routing.RegisterRoute(nameof(UserLogin), typeof(UserLogin));
-            Routing.RegisterRoute(nameof(ViewBatchContent), typeof(ViewBatchContent));
+            
         }
 
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LN2YXvPMfLmz6uQiBNEsOZClxontAbzR/8t+1IuBOiFX1rQY44Gj0wjtQg5kpxhOu0Rupp9j7HZW32LgA2Rvow==",
+  "dgSpecHash": "3bcxQQ900ucNpB4R9S5SYCC+qjhDmsr4kRYHSInXssSEmCYppxahPVtrppQtefrGQ6TeXcSf5bkS69M6s0Dccw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Documents\\c# projects\\Extras\\Extras\\Extras.Android\\Extras.Android.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\Documents\\c# projects\\Cirain-jobs\\Extras\\Extras.Android\\Extras.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\acr.userdialogs\\7.2.0.564\\acr.userdialogs.7.2.0.564.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\andhud\\1.4.3\\andhud.1.4.3.nupkg.sha512",

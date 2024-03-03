@@ -27,32 +27,36 @@ public class CirclePageIndicator
 	public CirclePageIndicator (android.content.Context p0)
 	{
 		super (p0);
-		if (getClass () == CirclePageIndicator.class)
+		if (getClass () == CirclePageIndicator.class) {
 			mono.android.TypeManager.Activate ("Com.ViewPagerIndicator.CirclePageIndicator, Com.ViewPagerIndicator", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 
 	public CirclePageIndicator (android.content.Context p0, android.util.AttributeSet p1)
 	{
 		super (p0, p1);
-		if (getClass () == CirclePageIndicator.class)
+		if (getClass () == CirclePageIndicator.class) {
 			mono.android.TypeManager.Activate ("Com.ViewPagerIndicator.CirclePageIndicator, Com.ViewPagerIndicator", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android", this, new java.lang.Object[] { p0, p1 });
+		}
 	}
 
 
 	public CirclePageIndicator (android.content.Context p0, android.util.AttributeSet p1, int p2)
 	{
 		super (p0, p1, p2);
-		if (getClass () == CirclePageIndicator.class)
+		if (getClass () == CirclePageIndicator.class) {
 			mono.android.TypeManager.Activate ("Com.ViewPagerIndicator.CirclePageIndicator, Com.ViewPagerIndicator", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, mscorlib", this, new java.lang.Object[] { p0, p1, p2 });
+		}
 	}
 
 
 	public CirclePageIndicator (android.content.Context p0, android.util.AttributeSet p1, int p2, int p3)
 	{
 		super (p0, p1, p2, p3);
-		if (getClass () == CirclePageIndicator.class)
+		if (getClass () == CirclePageIndicator.class) {
 			mono.android.TypeManager.Activate ("Com.ViewPagerIndicator.CirclePageIndicator, Com.ViewPagerIndicator", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, mscorlib:System.Int32, mscorlib", this, new java.lang.Object[] { p0, p1, p2, p3 });
+		}
 	}
 
 

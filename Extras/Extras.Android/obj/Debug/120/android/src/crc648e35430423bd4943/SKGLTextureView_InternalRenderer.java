@@ -18,8 +18,9 @@ public class SKGLTextureView_InternalRenderer
 	public SKGLTextureView_InternalRenderer ()
 	{
 		super ();
-		if (getClass () == SKGLTextureView_InternalRenderer.class)
+		if (getClass () == SKGLTextureView_InternalRenderer.class) {
 			mono.android.TypeManager.Activate ("SkiaSharp.Views.Android.SKGLTextureView+InternalRenderer, SkiaSharp.Views.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

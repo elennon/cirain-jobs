@@ -18,8 +18,9 @@ public class ConfirmAppCompatDialogFragment
 	public ConfirmAppCompatDialogFragment ()
 	{
 		super ();
-		if (getClass () == ConfirmAppCompatDialogFragment.class)
+		if (getClass () == ConfirmAppCompatDialogFragment.class) {
 			mono.android.TypeManager.Activate ("Acr.UserDialogs.Fragments.ConfirmAppCompatDialogFragment, Acr.UserDialogs", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

@@ -18,8 +18,9 @@ public abstract class SKGLTextureViewRenderer
 	public SKGLTextureViewRenderer ()
 	{
 		super ();
-		if (getClass () == SKGLTextureViewRenderer.class)
+		if (getClass () == SKGLTextureViewRenderer.class) {
 			mono.android.TypeManager.Activate ("SkiaSharp.Views.Android.SKGLTextureViewRenderer, SkiaSharp.Views.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

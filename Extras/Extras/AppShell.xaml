@@ -10,26 +10,22 @@
                   Shell.FlyoutBehavior="Disabled"
                   ContentTemplate="{DataTemplate local:UserLogin}"/>
     </FlyoutItem>
-    <FlyoutItem Title="Projects">
+    <FlyoutItem Title="Dashboard">
         <Tab>
-            <ShellContent ContentTemplate="{DataTemplate local:ProjectsPage}" />
+            <ShellContent ContentTemplate="{DataTemplate local:Dashboard}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="New Extra">
+    <FlyoutItem Title="New Job">
         <Tab>
             <ShellContent ContentTemplate="{DataTemplate local:NewExtra}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="Veiw ready to send">
+    <FlyoutItem Title="View Jobs">
         <Tab>
             <ShellContent ContentTemplate="{DataTemplate local:VeiwAll}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="Veiw previously sent">
-        <Tab>
-            <ShellContent ContentTemplate="{DataTemplate local:PreviousBatches}" />
-        </Tab>
-    </FlyoutItem>
+
     <FlyoutItem Title="About">
         <Tab>
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />

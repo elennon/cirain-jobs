@@ -18,16 +18,18 @@ public class SKGLSurfaceView
 	public SKGLSurfaceView (android.content.Context p0)
 	{
 		super (p0);
-		if (getClass () == SKGLSurfaceView.class)
+		if (getClass () == SKGLSurfaceView.class) {
 			mono.android.TypeManager.Activate ("SkiaSharp.Views.Android.SKGLSurfaceView, SkiaSharp.Views.Android", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 
 	public SKGLSurfaceView (android.content.Context p0, android.util.AttributeSet p1)
 	{
 		super (p0, p1);
-		if (getClass () == SKGLSurfaceView.class)
+		if (getClass () == SKGLSurfaceView.class) {
 			mono.android.TypeManager.Activate ("SkiaSharp.Views.Android.SKGLSurfaceView, SkiaSharp.Views.Android", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android", this, new java.lang.Object[] { p0, p1 });
+		}
 	}
 
 	private java.util.ArrayList refList;

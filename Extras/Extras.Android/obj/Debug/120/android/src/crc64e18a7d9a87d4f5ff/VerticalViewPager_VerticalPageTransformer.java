@@ -20,8 +20,9 @@ public class VerticalViewPager_VerticalPageTransformer
 	public VerticalViewPager_VerticalPageTransformer ()
 	{
 		super ();
-		if (getClass () == VerticalViewPager_VerticalPageTransformer.class)
+		if (getClass () == VerticalViewPager_VerticalPageTransformer.class) {
 			mono.android.TypeManager.Activate ("Com.Android.DeskClock.VerticalViewPager+VerticalPageTransformer, Com.Android.DeskClock", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

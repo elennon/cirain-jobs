@@ -18,8 +18,9 @@ public class MediaService
 	public MediaService ()
 	{
 		super ();
-		if (getClass () == MediaService.class)
+		if (getClass () == MediaService.class) {
 			mono.android.TypeManager.Activate ("Extras.Droid.MediaService, Extras.Android", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

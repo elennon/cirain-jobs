@@ -23,8 +23,9 @@ public class CarouselViewRenderer_PageAdapter
 	public CarouselViewRenderer_PageAdapter ()
 	{
 		super ();
-		if (getClass () == CarouselViewRenderer_PageAdapter.class)
+		if (getClass () == CarouselViewRenderer_PageAdapter.class) {
 			mono.android.TypeManager.Activate ("CarouselView.FormsPlugin.Droid.CarouselViewRenderer+PageAdapter, CarouselView.FormsPlugin.Droid", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

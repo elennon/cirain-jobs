@@ -40,8 +40,9 @@ public class ActivityLifecycleCallbacks
 	public ActivityLifecycleCallbacks ()
 	{
 		super ();
-		if (getClass () == ActivityLifecycleCallbacks.class)
+		if (getClass () == ActivityLifecycleCallbacks.class) {
 			mono.android.TypeManager.Activate ("Acr.UserDialogs.Infrastructure.ActivityLifecycleCallbacks, Acr.UserDialogs", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

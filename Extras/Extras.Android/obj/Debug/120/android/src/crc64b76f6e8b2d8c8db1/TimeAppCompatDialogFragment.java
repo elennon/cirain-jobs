@@ -18,8 +18,9 @@ public class TimeAppCompatDialogFragment
 	public TimeAppCompatDialogFragment ()
 	{
 		super ();
-		if (getClass () == TimeAppCompatDialogFragment.class)
+		if (getClass () == TimeAppCompatDialogFragment.class) {
 			mono.android.TypeManager.Activate ("Acr.UserDialogs.Fragments.TimeAppCompatDialogFragment, Acr.UserDialogs", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

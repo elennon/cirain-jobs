@@ -39,58 +39,64 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Save Extra"
+        <ToolbarItem Text="Save Job"
                      Clicked="OnSaveButtonClicked" />
     </ContentPage.ToolbarItems>
     <!-- Layout children vertically -->
     <ScrollView>
         <StackLayout Margin="20">
             <StackLayout Orientation="Horizontal">
-                <Label Text="Site" HeightRequest="60" VerticalTextAlignment="Center" TextColor="DarkSlateGray" FontSize="18" />
-                <Editor Placeholder="Job site" x:Name="siteName" HeightRequest="60" TextColor="DarkSlateGray" FontSize="18"
-                        HorizontalOptions="CenterAndExpand" WidthRequest="200" IsEnabled="False"/>
+                <Label Text="Job is for" HeightRequest="60" VerticalTextAlignment="Center" TextColor="DarkSlateGray" FontSize="18" />
+                <Editor x:Name="jobIsFor" HeightRequest="60" TextColor="DarkSlateGray" FontSize="18"
+                        HorizontalOptions="EndAndExpand" WidthRequest="200"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label Text="Area" HeightRequest="60" VerticalTextAlignment="Center" TextColor="DarkSlateGray" FontSize="18"/>
-                <Editor Placeholder="Site area" x:Name="siteArea" HeightRequest="60" TextColor="DarkSlateGray" FontSize="18"
-                        HorizontalOptions="CenterAndExpand"  WidthRequest="200"/>
+                <Label Text="Title" HeightRequest="60" VerticalTextAlignment="Center" TextColor="DarkSlateGray" FontSize="18"/>
+                <Editor x:Name="title" HeightRequest="60" TextColor="DarkSlateGray" FontSize="18"
+                        HorizontalOptions="EndAndExpand"  WidthRequest="200"/>
             </StackLayout>
+            
             <StackLayout Orientation="Horizontal">
-                <Label Text="Date" HeightRequest="60" VerticalTextAlignment="Center" TextColor="SlateGray" FontSize="18"/>
-                <DatePicker MinimumDate="01/01/2020" x:Name="exDate" HeightRequest="60" HorizontalOptions="CenterAndExpand"
-                    MaximumDate="12/31/2023" WidthRequest="200" TextColor="SlateGray" FontSize="18"
-                    Date="{Binding}" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Men" HeightRequest="60" VerticalTextAlignment="Center" TextColor="SlateGray" FontSize="18"/>
-                <Editor Placeholder="Number of men" x:Name="menNo" HeightRequest="60" Keyboard="Numeric"
-                        HorizontalOptions="CenterAndExpand" WidthRequest="200" TextColor="SlateGray" FontSize="18"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" HeightRequest="200">
-                <Label Text="Desc." HeightRequest="60" VerticalTextAlignment="Start" TextColor="SlateGray" FontSize="18"/>
-                <Editor Placeholder="Description" x:Name="description" HeightRequest="60" WidthRequest="200"
-                        AutoSize="TextChanges" HorizontalOptions="CenterAndExpand" TextColor="SlateGray" FontSize="18"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Hours" HeightRequest="60" VerticalTextAlignment="Center" TextColor="SlateGray" FontSize="18" />
-                <Editor Placeholder="Hours" x:Name="hours" HeightRequest="60" WidthRequest="200"
-                        HorizontalOptions="CenterAndExpand" Keyboard="Numeric" TextColor="SlateGray" FontSize="18"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Rate" HeightRequest="60" VerticalTextAlignment="Center" TextColor="SlateGray" FontSize="18" />
-                <Editor Placeholder="Rate" x:Name="rate" HeightRequest="60" WidthRequest="200"
-                        HorizontalOptions="CenterAndExpand" Keyboard="Numeric" TextColor="SlateGray" FontSize="18"/>
+                <Label Text="Contact" HeightRequest="60" VerticalTextAlignment="Start" TextColor="DarkSlateGray" FontSize="18"/>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Name" HeightRequest="60" VerticalTextAlignment="Center" TextColor="DarkSlateGray" FontSize="14"/>
+                        <Editor x:Name="contName" HeightRequest="60" TextColor="DarkSlateGray" FontSize="18"
+                                HorizontalOptions="EndAndExpand"  WidthRequest="200"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Number" HeightRequest="60" VerticalTextAlignment="Center" TextColor="DarkSlateGray" FontSize="14"/>
+                        <Editor x:Name="contNumber" HeightRequest="60" TextColor="DarkSlateGray" FontSize="18"
+                                HorizontalOptions="EndAndExpand"  WidthRequest="200" Keyboard="Numeric"/>
+                    </StackLayout>
+                </StackLayout>
             </StackLayout>
 
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Schedled" HeightRequest="60" VerticalTextAlignment="Center" TextColor="SlateGray" FontSize="18"/>
+                <DatePicker MinimumDate="01/01/2023" x:Name="nextScheduledDate" HeightRequest="60" HorizontalOptions="EndAndExpand"
+                    MaximumDate="12/31/2024" WidthRequest="200" TextColor="SlateGray" FontSize="18"
+                    Date="{Binding}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HeightRequest="200">
+                <Label Text="Comments" HeightRequest="60" VerticalTextAlignment="Start" TextColor="SlateGray" FontSize="18"/>
+                <Editor x:Name="comments" HeightRequest="30" WidthRequest="200"
+                        AutoSize="TextChanges" HorizontalOptions="EndAndExpand" TextColor="SlateGray" FontSize="18"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Price" HeightRequest="60" VerticalTextAlignment="Center" TextColor="DarkSlateGray" FontSize="18"/>
+                <Editor x:Name="price" HeightRequest="60" TextColor="DarkSlateGray" FontSize="18"
+                        HorizontalOptions="EndAndExpand"  WidthRequest="200"/>
+            </StackLayout>
             <StackLayout>
                 <Label Text="Select Photos"
-                   HorizontalOptions="CenterAndExpand"
-                   TextColor="SlateGray"
-                   FontSize="Large"
-                   FontAttributes="Bold" />
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="SlateGray"
+                       FontSize="Large"
+                       FontAttributes="Bold" /> 
                 <StackLayout>
                     <Button Text="Select Images"
-                        Clicked="SelectImagesButton_Clicked"></Button>
+                            Clicked="SelectImagesButton_Clicked"></Button>
                 </StackLayout>
                 <!-- The CarouselView inside of a StackLayout. -->
                 <StackLayout Margin="0,0,0,20" >
@@ -102,9 +108,8 @@
                         </CV:CarouselViewControl.ItemTemplate>
                     </CV:CarouselViewControl>
                 </StackLayout>
-                
-            </StackLayout>
 
+            </StackLayout>
         </StackLayout>
     </ScrollView>
 </ContentPage>

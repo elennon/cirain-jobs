@@ -18,8 +18,9 @@ public class BottomSheetDialogFragment
 	public BottomSheetDialogFragment ()
 	{
 		super ();
-		if (getClass () == BottomSheetDialogFragment.class)
+		if (getClass () == BottomSheetDialogFragment.class) {
 			mono.android.TypeManager.Activate ("Acr.UserDialogs.Fragments.BottomSheetDialogFragment, Acr.UserDialogs", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

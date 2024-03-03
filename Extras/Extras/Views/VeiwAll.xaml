@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Extras.Views.VeiwAll"
              Title="ready to send">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="send exel email"
-                     Clicked="sendAsEmailClicked" />
-    </ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Update"
+                     Clicked="UpdateJobClicked" />
+    </ContentPage.ToolbarItems>-->
     <ContentPage.Resources>
         <Style TargetType="Grid">
             <Setter Property="VisualStateManager.VisualStateGroups">
@@ -31,21 +31,6 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="send to email" VerticalTextAlignment="Center" Margin="8" />
-                <Editor Placeholder="Enter email" x:Name="emailto" HeightRequest="60" WidthRequest="200" Style="{StaticResource labelDarkStyle}"
-                        HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Keyboard="Email" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="email subject" Style="{StaticResource labelDarkStyle}" VerticalTextAlignment="Center" Margin="8"/>
-                <Editor Placeholder="Email subject" x:Name="subject" Style="{StaticResource labelDarkStyle}" WidthRequest="200" 
-                        HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-                <Label Text="email body" Style="{StaticResource labelDarkStyle}" VerticalTextAlignment="Center" Margin="8"/>
-                <Editor Placeholder="Email body" x:Name="body" WidthRequest="200" Style="{StaticResource labelDarkStyle}" AutoSize="TextChanges"
-                        HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-            </StackLayout>
             <Label x:Name="emptyLabel" IsVisible="false" Style="{StaticResource labelDarkStyle}" VerticalTextAlignment="Center" Margin="8"/>
             <ScrollView VerticalScrollBarVisibility="Always">
                 <CollectionView x:Name="collectionView" SelectionMode="Single" 
@@ -68,9 +53,10 @@
                                     <ColumnDefinition Width="90" />
                                 </Grid.ColumnDefinitions>
                                 <Label Text="{Binding MyId}" IsVisible="false" Style="{StaticResource labelDarkStyle}"/>
-                                <Label Text="{Binding SiteArea}" VerticalOptions="Center" Grid.Column="0" Style="{StaticResource labelDarkStyle}"/>
-                                <Label Text="{Binding Date, StringFormat='{0:dd/MM/yyyy}'}" VerticalOptions="Center" Grid.Column="1" 
-                                       Style="{StaticResource labelDarkStyle}"/>
+                                <Label Text="{Binding JobIsFor}" VerticalOptions="Center" Grid.Column="0" Style="{StaticResource labelDarkStyle}"/>
+                                <Label Text="{Binding Title}" VerticalOptions="Center" Grid.Column="1" Style="{StaticResource labelDarkStyle}"/>
+                                <!--<Label Text="{Binding Date, StringFormat='{0:dd/MM/yyyy}'}" VerticalOptions="Center" Grid.Column="1" 
+                                       Style="{StaticResource labelDarkStyle}"/>-->
                                 <Image x:Name="deletePrg" Source="deletePhoto.jpg" Grid.Column="2" HorizontalOptions="End" 
                                        Margin="0,0,0,0" VerticalOptions="Center" >
                                     <Image.GestureRecognizers>

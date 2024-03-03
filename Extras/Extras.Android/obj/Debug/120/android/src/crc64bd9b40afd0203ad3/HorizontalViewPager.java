@@ -20,16 +20,18 @@ public class HorizontalViewPager
 	public HorizontalViewPager (android.content.Context p0)
 	{
 		super (p0);
-		if (getClass () == HorizontalViewPager.class)
+		if (getClass () == HorizontalViewPager.class) {
 			mono.android.TypeManager.Activate ("CarouselView.FormsPlugin.Droid.HorizontalViewPager, CarouselView.FormsPlugin.Droid", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 
 	public HorizontalViewPager (android.content.Context p0, android.util.AttributeSet p1)
 	{
 		super (p0, p1);
-		if (getClass () == HorizontalViewPager.class)
+		if (getClass () == HorizontalViewPager.class) {
 			mono.android.TypeManager.Activate ("CarouselView.FormsPlugin.Droid.HorizontalViewPager, CarouselView.FormsPlugin.Droid", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android", this, new java.lang.Object[] { p0, p1 });
+		}
 	}
 
 

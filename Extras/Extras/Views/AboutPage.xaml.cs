@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Net.Mail;
 
 namespace Extras.Views
 {
@@ -15,17 +16,43 @@ namespace Extras.Views
     {
         public AboutPage()
         {
-            InitializeComponent();         
+            InitializeComponent();
+            //sendEmail();
         }
+        //private void sendEmail()
+        //{
+        //    try
+        //    {
 
+        //        MailMessage mail = new MailMessage();
+        //        SmtpClient SmtpServer = new SmtpClient("mail.elstorage.ie");
+
+        //        mail.From = new MailAddress("ed@elstorage.ie");
+        //        mail.To.Add("eee_lennon@yahoo.com");
+        //        mail.Subject = "a subject";
+        //        mail.Body = "fit";
+
+        //        //SmtpServer.Port = 465;
+        //        SmtpServer.Host = "mail.elstorage.ie";
+        //        SmtpServer.EnableSsl = true;
+        //        SmtpServer.UseDefaultCredentials = false;
+        //        SmtpServer.Credentials = new System.Net.NetworkCredential("ed@elstorage.ie", "Rhiabit1");
+
+        //        SmtpServer.Send(mail);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        DisplayAlert("Faild", ex.Message, "OK");
+        //    }
+        //}
 
         private async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            var all = await App.Database.GetExtrasAsync(App.Database.GetCurrentProjectAsync().Result.MyId);
-            foreach (var item in all)
-            {
-                await App.Database.DeleteExtraAsync(item);
-            }
+            //var all = await App.Database.GetExtrasAsync(App.Database.GetCurrentProjectAsync().Result.MyId);
+            //foreach (var item in all)
+            //{
+            //    await App.Database.DeleteExtraAsync(item);
+            //}
         }
 
         //private void LongPressBehavior_LongPressed(object sender, EventArgs e)

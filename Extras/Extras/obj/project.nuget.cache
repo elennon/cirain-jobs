@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F5ysLTNL6j4jsUZzpMe1amr41+8ojkxKmSdLWOkvL1Je/2ushoEpmHgM/QtF+oF4uchaupBKqwrnZpqY4lASRQ==",
+  "dgSpecHash": "7L5kJ/JarnhY/qIyQUFBv5aXc4Db0cnP6iE4ISna9MzkdIowmLstglg/4rX03Vc+kI5/jzuQ5BMjpwbd3F9VsA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Documents\\c# projects\\Extras\\Extras\\Extras\\Extras.csproj",
+  "projectFilePath": "C:\\Users\\Asus\\Documents\\c# projects\\Cirain-jobs\\Extras\\Extras\\Extras.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\acr.userdialogs\\7.2.0.564\\acr.userdialogs.7.2.0.564.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\carouselview.formsplugin\\6.0.0\\carouselview.formsplugin.6.0.0.nupkg.sha512",

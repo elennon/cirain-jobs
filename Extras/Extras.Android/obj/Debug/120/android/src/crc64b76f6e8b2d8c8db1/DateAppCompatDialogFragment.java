@@ -18,8 +18,9 @@ public class DateAppCompatDialogFragment
 	public DateAppCompatDialogFragment ()
 	{
 		super ();
-		if (getClass () == DateAppCompatDialogFragment.class)
+		if (getClass () == DateAppCompatDialogFragment.class) {
 			mono.android.TypeManager.Activate ("Acr.UserDialogs.Fragments.DateAppCompatDialogFragment, Acr.UserDialogs", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

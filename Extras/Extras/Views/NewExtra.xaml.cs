@@ -17,8 +17,6 @@ namespace Extras.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NewExtra : ContentPage
     {
-
-        private Project currentProject = new Project();
         private string AppFolder => Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         public List<string> Pics { get; set; }
         public NewExtra()
@@ -28,20 +26,11 @@ namespace Extras.Views
             Device.BeginInvokeOnMainThread(async () => await AskForPermissions());
         }
 
-        protected async override void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
-            exDate.Date = DateTime.Today;
-            currentProject = await App.Database.GetCurrentProjectAsync();
-            if (currentProject == null)
-            {
-                await DisplayAlert("", "There is no project selected as current project. Please add a project and set it as current project.", "OK");
-                await Shell.Current.GoToAsync(nameof(ProjectsPage));
-            }
-            else
-            {
-                siteName.Text = currentProject.ProjectName;
-            }
+            //exDate.Date = DateTime.Today;
+            
         }
         
         async void OnSaveButtonClicked(object sender, EventArgs e)
@@ -50,70 +39,43 @@ namespace Extras.Views
             {
                 var ext = new Extra();// = (Extra)BindingContext;
                 ext.MyId = Guid.NewGuid().ToString();
-                if (menNo.Text == null || menNo.Text == "")
+                                
+                if (jobIsFor.Text == null || jobIsFor.Text == "")
                 {
-                    await DisplayAlert("Not Saved", "You need to add number of men", "OK");
+                    await DisplayAlert("Not Saved", "You need to add who the job is for", "OK");
                     return;
                 }
-                ext.Men = Convert.ToInt16(menNo.Text);
-                if (description.Text == null || description.Text == "")
+                ext.JobIsFor = jobIsFor.Text;
+                if (title.Text == null || title.Text == "")
                 {
-                    await DisplayAlert("Not Saved", "You need to add a description", "OK");
+                    await DisplayAlert("Not Saved", "You need to add a job title", "OK");
                     return;
-                }
-                ext.Description = description.Text;
-                ext.Date =  exDate.Date;
-                if (hours.Text == null || hours.Text == "")
+                }              
+                ext.Title = title.Text;
+                ext.ContactName = (contName.Text == null) ? string.Empty : contName.Text;               
+                ext.ContactNumber = contNumber.Text;
+                ext.Status = "Pending";
+                ext.NextSchedledDate = nextScheduledDate.Date;
+                ext.Comments = (comments.Text == null) ? string.Empty : comments.Text;
+                ext.Price = Convert.ToInt16(price.Text);
+                var iid = App.Database.SaveExtraAsync(ext);
+                if (Pics != null)
                 {
-                    await DisplayAlert("Not Saved", "You need to add number of hours", "OK");
-                    return;
-                }
-                ext.Hours = Convert.ToDouble(hours.Text);
-                if (rate.Text == null || rate.Text == "")
-                {
-                    ext.Rate = 0;
-                }
-                else
-                {
-                    ext.Rate = Convert.ToDouble(rate.Text);
-                }
-                ext.JobSite = siteName.Text;
-                if (siteArea.Text == null || siteArea.Text == "")
-                {
-                    await DisplayAlert("Not Saved", "You need to add the site area", "OK");
-                    return;
-                }
-                ext.SiteArea = siteArea.Text;
-                ext.ProjectId = currentProject.MyId;
-                ext.WasSent = false;
-
-                var extrs = await App.Database.GetExtrasAsync(currentProject.MyId);
-                var tooBig = await CheckPhotosSize(extrs.FindAll(x => x.WasSent == false));
-                if (tooBig)
-                {
-                    await DisplayAlert("Not Saved", "You need to go to 'Veiw ready to send' and send off that list before adding any more because the images zip file will be too big to email.", "OK");
-                }
-                else
-                {
-                    var iid = App.Database.SaveExtraAsync(ext);
-                    if (Pics != null)
+                    var piks = getPics(Pics);
+                    int counter = 0;
+                    foreach (var pik in piks.Item1)
                     {
-                        var piks = getPics(Pics);
-                        int counter = 0;
-                        foreach (var pik in piks.Item1)
+                        Pics pc = new Pics
                         {
-                            Pics pc = new Pics
-                            {
-                                //Pic = pik,
-                                ExtraId = ext.MyId,
-                                FileName = piks.Item2[counter]
-                            };
-                            await App.Database.SavePicAsync(pc);
-                            counter++;
-                        }
+                            //Pic = pik,
+                            ExtraId = ext.MyId,
+                            FileName = piks.Item2[counter]
+                        };
+                        await App.Database.SavePicAsync(pc);
+                        counter++;
                     }
-                    await DisplayAlert("Saved!", "", "OK");
-                }                
+                }
+                await DisplayAlert("Saved!", "", "OK");
             }
             catch (Exception)
             {

@@ -21,8 +21,9 @@ public abstract class AbstractAppCompatDialogFragment_1
 	public AbstractAppCompatDialogFragment_1 ()
 	{
 		super ();
-		if (getClass () == AbstractAppCompatDialogFragment_1.class)
+		if (getClass () == AbstractAppCompatDialogFragment_1.class) {
 			mono.android.TypeManager.Activate ("Acr.UserDialogs.Fragments.AbstractAppCompatDialogFragment`1, Acr.UserDialogs", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

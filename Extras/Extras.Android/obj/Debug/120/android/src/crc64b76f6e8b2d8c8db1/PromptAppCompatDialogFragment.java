@@ -18,8 +18,9 @@ public class PromptAppCompatDialogFragment
 	public PromptAppCompatDialogFragment ()
 	{
 		super ();
-		if (getClass () == PromptAppCompatDialogFragment.class)
+		if (getClass () == PromptAppCompatDialogFragment.class) {
 			mono.android.TypeManager.Activate ("Acr.UserDialogs.Fragments.PromptAppCompatDialogFragment, Acr.UserDialogs", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 	private java.util.ArrayList refList;

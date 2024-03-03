@@ -76,25 +76,24 @@ namespace Extras
                 // Possible that device doesn't support secure storage on device.
             }
         }
-        protected  override void OnStart()
-        {
-            //await clearDb();
-        }
-
-        //private async Task clearDb()
+        //protected async override void OnStart()
         //{
-        //    var extrs = await database.GetExtrasAsync();
-        //    foreach (var item in extrs)
-        //    {
-        //        await database.DeleteExtraAsync(item);
-        //        var pics = await database.GetPicsAsync(item.ID);
-        //        foreach (var pic in pics)
-        //        {
-        //            await database.DeletePicAsync(pic);
-        //        }
-        //    }
-            
+        //    await clearDb();
         //}
+
+        private async Task clearDb()
+        {
+            var extrs = await database.GetExtrasAsync();
+            foreach (var item in extrs)
+            {
+                await database.DeleteExtraAsync(item);
+                var pics = await database.GetPicsAsync(item.ID.ToString());
+                foreach (var pic in pics)
+                {
+                    await database.DeletePicAsync(pic);
+                }
+            }
+        }
 
         protected override void OnSleep()
         {

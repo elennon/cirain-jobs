@@ -20,8 +20,9 @@ public class GlobalLayoutListener
 	public GlobalLayoutListener ()
 	{
 		super ();
-		if (getClass () == GlobalLayoutListener.class)
+		if (getClass () == GlobalLayoutListener.class) {
 			mono.android.TypeManager.Activate ("CarouselView.FormsPlugin.Droid.GlobalLayoutListener, CarouselView.FormsPlugin.Droid", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

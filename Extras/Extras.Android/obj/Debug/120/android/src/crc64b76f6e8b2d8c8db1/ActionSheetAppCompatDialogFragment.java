@@ -20,8 +20,9 @@ public class ActionSheetAppCompatDialogFragment
 	public ActionSheetAppCompatDialogFragment ()
 	{
 		super ();
-		if (getClass () == ActionSheetAppCompatDialogFragment.class)
+		if (getClass () == ActionSheetAppCompatDialogFragment.class) {
 			mono.android.TypeManager.Activate ("Acr.UserDialogs.Fragments.ActionSheetAppCompatDialogFragment, Acr.UserDialogs", "", this, new java.lang.Object[] {  });
+		}
 	}
 
 

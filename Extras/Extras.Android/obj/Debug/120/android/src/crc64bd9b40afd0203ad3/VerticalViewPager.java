@@ -20,16 +20,18 @@ public class VerticalViewPager
 	public VerticalViewPager (android.content.Context p0)
 	{
 		super (p0);
-		if (getClass () == VerticalViewPager.class)
+		if (getClass () == VerticalViewPager.class) {
 			mono.android.TypeManager.Activate ("CarouselView.FormsPlugin.Droid.VerticalViewPager, CarouselView.FormsPlugin.Droid", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
+		}
 	}
 
 
 	public VerticalViewPager (android.content.Context p0, android.util.AttributeSet p1)
 	{
 		super (p0, p1);
-		if (getClass () == VerticalViewPager.class)
+		if (getClass () == VerticalViewPager.class) {
 			mono.android.TypeManager.Activate ("CarouselView.FormsPlugin.Droid.VerticalViewPager, CarouselView.FormsPlugin.Droid", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android", this, new java.lang.Object[] { p0, p1 });
+		}
 	}
 
 
