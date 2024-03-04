@@ -56,6 +56,16 @@ namespace Extras.ViewModels
                 NotifyPropertyChanged("Password");
             }
         }
+        protected void SetProperty<TData>(ref TData storage, TData value, [CallerMemberName] string propertyName = "")
+        {
+            if (storage?.Equals(value) == true)
+                return;
+
+            storage = value;
+
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         #region INotifyPropertyChanged  
         public event PropertyChangedEventHandler PropertyChanged;
         protected void NotifyPropertyChanged([CallerMemberName] string propertyName = "")

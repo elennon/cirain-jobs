@@ -56,8 +56,8 @@
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Next Schedled Date" HeightRequest="60" VerticalTextAlignment="Center" TextColor="SlateGray" FontSize="18"/>
-                <DatePicker MinimumDate="01/01/2020" x:Name="NextSchedledDate" HeightRequest="60" HorizontalOptions="EndAndExpand"
-                    MaximumDate="12/31/2023" WidthRequest="200" TextColor="SlateGray" FontSize="18"
+                <DatePicker MinimumDate="01/01/2024" x:Name="NextSchedledDate" HeightRequest="60" HorizontalOptions="EndAndExpand"
+                    MaximumDate="12/31/2025" WidthRequest="200" TextColor="SlateGray" FontSize="18"
                     Date="{Binding}" />
             </StackLayout>
             <StackLayout Orientation="Horizontal" HeightRequest="200">

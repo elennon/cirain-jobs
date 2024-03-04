@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7L5kJ/JarnhY/qIyQUFBv5aXc4Db0cnP6iE4ISna9MzkdIowmLstglg/4rX03Vc+kI5/jzuQ5BMjpwbd3F9VsA==",
+  "dgSpecHash": "l8qVrR0Odrwi9Z00ibkxuPjviZ1fkZLzMmQSJEupnqdX+XWbfokEYPHkSiq0EEKvVs+wOhYRP52xoxj4fnZyFg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Asus\\Documents\\c# projects\\Cirain-jobs\\Extras\\Extras\\Extras.csproj",
   "expectedPackageFiles": [
@@ -33,7 +33,8 @@
     "C:\\Users\\Asus\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\xamarin.ffimageloading\\2.4.11.982\\xamarin.ffimageloading.2.4.11.982.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\xamarin.ffimageloading.forms\\2.4.11.982\\xamarin.ffimageloading.forms.2.4.11.982.nupkg.sha512",
-    "C:\\Users\\Asus\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512"
+    "C:\\Users\\Asus\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\xamarin.plugin.calendar\\2.0.9699\\xamarin.plugin.calendar.2.0.9699.nupkg.sha512"
   ],
   "logs": []
 }

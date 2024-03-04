@@ -15,12 +15,9 @@ namespace Extras.Data
 
             //database.DropTableAsync<Extra>().Wait();
             //database.DropTableAsync<Pics>().Wait();
-            //database.DropTableAsync<Project>().Wait();
-            //database.DropTableAsync<Batch>().Wait();
-
-            database.CreateTableAsync<Extra>().Wait();
-            database.CreateTableAsync<Pics>().Wait();
             
+            database.CreateTableAsync<Extra>().Wait();
+            database.CreateTableAsync<Pics>().Wait();           
             database.CreateTableAsync<User>().Wait();
         }
 

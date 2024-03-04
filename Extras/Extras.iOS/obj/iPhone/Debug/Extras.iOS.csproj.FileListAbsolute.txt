@@ -216,3 +216,5 @@ C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\obj\iPhone\Deb
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\obj\iPhone\Debug\Extras.iOS.csproj.CopyComplete
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\obj\iPhone\Debug\Extras.iOS.exe
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\obj\iPhone\Debug\Extras.iOS.pdb
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Xamarin.Plugin.Calendar.dll
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Xamarin.Plugin.Calendar.pdb

@@ -618,6 +618,25 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Plugin.Calendar/2.0.9699": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1687"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Xamarin.Plugin.Calendar.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Xamarin.Plugin.Calendar.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Extras/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -635,6 +654,7 @@
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
           "Xamarin.Forms": "5.0.0.2515",
+          "Xamarin.Plugin.Calendar": "2.0.9699",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -1240,6 +1260,25 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Plugin.Calendar/2.0.9699": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1687"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Xamarin.Plugin.Calendar.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Xamarin.Plugin.Calendar.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Extras/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1257,6 +1296,7 @@
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
           "Xamarin.Forms": "5.0.0.2515",
+          "Xamarin.Plugin.Calendar": "2.0.9699",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -1860,6 +1900,25 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Plugin.Calendar/2.0.9699": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1687"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Xamarin.Plugin.Calendar.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Xamarin.Plugin.Calendar.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Extras/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1877,6 +1936,7 @@
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
           "Xamarin.Forms": "5.0.0.2515",
+          "Xamarin.Plugin.Calendar": "2.0.9699",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -2480,6 +2540,25 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Plugin.Calendar/2.0.9699": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1687"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Xamarin.Plugin.Calendar.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Xamarin.Plugin.Calendar.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Extras/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -2497,6 +2576,7 @@
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
           "Xamarin.Forms": "5.0.0.2515",
+          "Xamarin.Plugin.Calendar": "2.0.9699",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -3100,6 +3180,25 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Plugin.Calendar/2.0.9699": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1687"
+        },
+        "frameworkAssemblies": [
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Xamarin.Plugin.Calendar.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Xamarin.Plugin.Calendar.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Extras/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -3117,6 +3216,7 @@
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
           "Xamarin.Forms": "5.0.0.2515",
+          "Xamarin.Plugin.Calendar": "2.0.9699",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -4276,6 +4376,26 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
         "xamarin.forms.5.0.0.2515.nupkg.sha512",
         "xamarin.forms.nuspec"
+      ]
+    },
+    "Xamarin.Plugin.Calendar/2.0.9699": {
+      "sha512": "Yt1MHlv1uu9LiihnsyyCc/YagU2bJcQLi6XPtLneW8WiT8uLemgGDu0O75hFvdEtyk8uUOg/1pR9jNbnP+dzQw==",
+      "type": "package",
+      "path": "xamarin.plugin.calendar/2.0.9699",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/Xamarin.Plugin.Calendar.dll",
+        "lib/monoandroid10.0/Xamarin.Plugin.Calendar.pdb",
+        "lib/monoandroid10.0/Xamarin.Plugin.Calendar.xml",
+        "lib/netstandard2.0/Xamarin.Plugin.Calendar.dll",
+        "lib/netstandard2.0/Xamarin.Plugin.Calendar.pdb",
+        "lib/netstandard2.0/Xamarin.Plugin.Calendar.xml",
+        "lib/xamarinios10/Xamarin.Plugin.Calendar.dll",
+        "lib/xamarinios10/Xamarin.Plugin.Calendar.pdb",
+        "lib/xamarinios10/Xamarin.Plugin.Calendar.xml",
+        "xamarin.plugin.calendar.2.0.9699.nupkg.sha512",
+        "xamarin.plugin.calendar.nuspec"
       ]
     },
     "Extras/1.0.0": {
