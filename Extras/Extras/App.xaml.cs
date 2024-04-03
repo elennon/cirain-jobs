@@ -32,6 +32,7 @@ namespace Extras
         public App()
         {
             InitializeComponent();
+
             var Foo = UserSettings.IsLoggedIn;
 
             if (Foo == Boolean.FalseString)

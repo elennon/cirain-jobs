@@ -33,7 +33,7 @@ namespace Extras.Views
             base.OnAppearing();
             extrs = await App.Database.GetExtrasAsync();
             myCollection = new ObservableCollection<Extra>(extrs);
-            collectionView.ItemsSource = myCollection;
+            collectionView.ItemsSource = myCollection.Where(x => x.Status == "Started");
         }
         private async Task<string> GetPw(string key)
         {

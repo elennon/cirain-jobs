@@ -30,8 +30,11 @@ C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstand
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\Views\Dashboard.xaml.g.cs
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\Views\JobDetails.xaml.g.cs
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\Views\NewExtra.xaml.g.cs
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\Views\RecordAudio.xaml.g.cs
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\Views\UserLogin.xaml.g.cs
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\Views\VeiwAll.xaml.g.cs
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\Extras.AssemblyInfoInputs.cache
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\Extras.AssemblyInfo.cs
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\Extras.csproj.CoreCompileInputs.cache
@@ -41,5 +44,3 @@ C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstand
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\refint\Extras.dll
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\Extras.pdb
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\ref\Extras.dll
-C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\Views\VeiwAll.xaml.g.cs
-C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras\obj\Debug\netstandard2.0\Views\JobDetails.xaml.g.cs

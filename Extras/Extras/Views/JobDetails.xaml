@@ -35,6 +35,11 @@
                 <Setter Property="Aspect" Value="AspectFill" />
                 <Setter Property="DownsampleWidth" Value="{StaticResource downsampleWidth}" />
             </Style>
+            <Style x:Key="labelDarkStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="DarkSlateGray" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="HeightRequest" Value="60" />
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
@@ -60,10 +65,29 @@
                     MaximumDate="12/31/2025" WidthRequest="200" TextColor="SlateGray" FontSize="18"
                     Date="{Binding}" />
             </StackLayout>
-            <StackLayout Orientation="Horizontal" HeightRequest="200">
-                <Label Text="Comments" HeightRequest="60" VerticalTextAlignment="Start" TextColor="SlateGray" FontSize="18"/>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Notes" HeightRequest="60" VerticalTextAlignment="Start" TextColor="SlateGray" FontSize="18"/>
                 <Editor x:Name="Comments" HeightRequest="60" WidthRequest="200"
-                        AutoSize="TextChanges" HorizontalOptions="EndAndExpand" TextColor="SlateGray" FontSize="18"/>
+            AutoSize="TextChanges" HorizontalOptions="EndAndExpand" TextColor="SlateGray" FontSize="18"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Audio notes" HeightRequest="60" VerticalTextAlignment="Start" TextColor="SlateGray" FontSize="18"/>
+                <Picker x:Name="audioPicker" Title="play recorded notes" ItemsSource="{Binding NoteList}" ItemDisplayBinding="{Binding AudioNoteFileName}"
+                        SelectedItem="{Binding AudioNoteFileName}" HorizontalOptions="EndAndExpand" WidthRequest="200" 
+                        SelectedIndexChanged="audioPicker_SelectedIndexChanged">
+                    <Picker.GestureRecognizers>
+                        <TapGestureRecognizer
+                Tapped="TapGestureRecognizer_Tapped"
+                NumberOfTapsRequired="1" />
+                    </Picker.GestureRecognizers>
+                </Picker>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Record notes" HeightRequest="60" VerticalTextAlignment="Start" TextColor="SlateGray" FontSize="18"/>
+                <Button x:Name="Record" Text="record" HeightRequest="30" WidthRequest="100" Clicked="Record_Clicked"
+            HorizontalOptions="Center" TextColor="SlateGray" FontSize="18"/>
+                <Button x:Name="stopRecord" Text="stop" HeightRequest="30" WidthRequest="100" Clicked="stopRecord_ClickedAsync"
+            HorizontalOptions="End" TextColor="SlateGray" FontSize="18"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="ContactName" HeightRequest="60" VerticalTextAlignment="Center" TextColor="DarkSlateGray" FontSize="18"/>

@@ -15,7 +15,7 @@ namespace Extras
             Routing.RegisterRoute(nameof(Dashboard), typeof(Dashboard));
             Routing.RegisterRoute(nameof(VeiwAll), typeof(VeiwAll));
             Routing.RegisterRoute(nameof(UserLogin), typeof(UserLogin));
-            
+            Routing.RegisterRoute(nameof(RecordAudio), typeof(RecordAudio));
         }
 
     }

@@ -1,4 +1,5 @@
 ﻿using Extras.Models;
+using Extras.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,8 +15,7 @@ namespace Extras.ViewModels
     public class DashboardViewModel : BasePageViewModel
     {
         private List<Extra> extrs = new List<Extra>();
-
-        ObservableCollection<Extra> myCollection;
+        
         public EventCollection Events { get; }
         public ICommand TodayCommand => new Command(() =>
         {
@@ -30,25 +30,29 @@ namespace Extras.ViewModels
 
             //var jobs = GetJobs();
             Events = new EventCollection();
-            //{
-            //    { DateTime.Today, new List<Extra>() { new Extra { JobIsFor = "franeeee", Title = "some work" } } }
-            //};
+            
             GetJobs();
         }
 
         private async void GetJobs()
         {
             extrs = await App.Database.GetExtrasAsync();
-            foreach (var job in extrs)
+            var filtered = extrs.GroupBy(
+                                    p => p.NextSchedledDate,
+                                    p => p.MyId,
+                                    (key, g) => new { DateKeyId = key, jobIds = g.ToList() });
+            
+            foreach (var item in filtered) 
             {
-                Events.Add((DateTime)job.NextSchedledDate, new List<Extra>() { new Extra { JobIsFor = job.JobIsFor, Title = job.Title } });
+                List<Extra> extss = extrs.Where(x => item.jobIds.Contains(x.MyId)).ToList();
+                Events.Add((DateTime)item.DateKeyId, extss);
             }
         }
 
         private IEnumerable<EventModel> GenerateEvents(Extra job)
         {
-            return new List<EventModel>() { new EventModel { Name=job.JobIsFor, Description = job.Title} };                  
-
+            return new List<EventModel>() { new EventModel { Name = job.JobIsFor, Description = job.Title } };
+        }
         private int _month = DateTime.Today.Month;
 
         public int Month
@@ -91,10 +95,8 @@ namespace Extras.ViewModels
 
         private async Task ExecuteEventSelectedCommand(object item)
         {
-            if (item is EventModel eventModel)
-            {
-                await App.Current.MainPage.DisplayAlert(eventModel.Name, eventModel.Description, "Ok");
-            }
+            Extra ext = item as Extra;
+            await Shell.Current.GoToAsync($"{nameof(JobDetails)}?{nameof(JobDetails.ID)}={ext.MyId}");            
         }
     }
 }

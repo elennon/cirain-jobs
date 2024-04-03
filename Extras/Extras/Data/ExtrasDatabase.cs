@@ -14,11 +14,12 @@ namespace Extras.Data
             database = new SQLiteAsyncConnection(dbPath);
 
             //database.DropTableAsync<Extra>().Wait();
-            //database.DropTableAsync<Pics>().Wait();
+            //database.DropTableAsync<AudioNote>().Wait();
             
             database.CreateTableAsync<Extra>().Wait();
             database.CreateTableAsync<Pics>().Wait();           
             database.CreateTableAsync<User>().Wait();
+            database.CreateTableAsync<AudioNote>().Wait();
         }
 
         public Task<List<Extra>> GetExtrasAsync()
@@ -88,7 +89,38 @@ namespace Extras.Data
             // Delete a note.
             return database.DeleteAsync(note);
         }
-        
 
+        public Task<List<AudioNote>> GetAudioNoteAsync(string extraId)
+        {
+            //Get all Quote.
+            return database.Table<AudioNote>().Where(x => x.ExtraId == extraId).ToListAsync();
+        }
+
+        public Task<AudioNote> GetAudioNoteAsync(int id)
+        {
+            // Get a specific note.
+            return database.Table<AudioNote>()
+                            .Where(i => i.ID == id)
+                            .FirstOrDefaultAsync();
+        }
+
+        public Task<int> SaveAudioNoteAsync(AudioNote note)
+        {
+            if (note.ID != 0)
+            {
+                // Update an existing note.
+                return database.UpdateAsync(note);
+            }
+            else
+            {
+                // Save a new note.
+                return database.InsertAsync(note);
+            }
+        }
+        public Task<int> DeleteAudioNoteAsync(AudioNote note)
+        {
+            // Delete a note.
+            return database.DeleteAsync(note);
+        }
     }
 }

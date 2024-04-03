@@ -179,9 +179,17 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "Plugin.AudioRecorder": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "Plugin.Permissions": {
               "target": "Package",
               "version": "[6.0.1, )"
+            },
+            "Refractored.MvvmHelpers": {
+              "target": "Package",
+              "version": "[1.6.2, )"
             },
             "SQLiteNetExtensions": {
               "target": "Package",
@@ -198,6 +206,10 @@
             "Xam.Plugin.Media": {
               "target": "Package",
               "version": "[5.0.1, )"
+            },
+            "Xam.Plugin.SimpleAudioPlayer": {
+              "target": "Package",
+              "version": "[1.6.0, )"
             },
             "Xam.Plugins.Settings": {
               "target": "Package",

@@ -1,13 +1,16 @@
-﻿using Extras.Models;
+﻿using Extras.Helpers;
+using Extras.Models;
 using Extras.Services;
 using Extras.ViewModels;
 using Plugin.Media;
 using Plugin.Permissions;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,9 +28,14 @@ namespace Extras.Views
             set
             {
                 LoadExtra(value);
-            }
+            }            
         }
         public List<string> Pics { get; set; }
+        private bool Audiorecorded = false;
+        private string audioFileName;
+        private string jobId;
+        ObservableCollection<AudioNote> recordings;
+        private int recordCount = 1;
         public JobDetails()
         {
             InitializeComponent();
@@ -35,7 +43,13 @@ namespace Extras.Views
             statusPicker.BindingContext = new StatusViewModel
             {
                 JobList = GetStatus()
-            };            
+            };           
+        }
+
+        private async Task GetAudioRecordingsAsync(string jobId)
+        {
+            List<AudioNote> qt = await App.Database.GetAudioNoteAsync(jobId);
+            recordings = new ObservableCollection<AudioNote>(qt);                       
         }
 
         private List<Status> GetStatus()
@@ -54,11 +68,26 @@ namespace Extras.Views
             {
                 //int id = Convert.ToInt32(ID);
                 Extra qt = await App.Database.GetExtraAsync(ID);
+                jobId = qt.MyId;
                 BindingContext = qt;
                 JobIsFor.Text = qt.JobIsFor;
                 Title.Text = qt.Title;
                 NextSchedledDate.Date = (DateTime)qt.NextSchedledDate;
                 Comments.Text = qt.Comments;
+                await GetAudioRecordingsAsync(qt.MyId);
+                var gestureRecognizer = new TapGestureRecognizer
+                {
+                    NumberOfTapsRequired = 1
+                };
+                gestureRecognizer.Tapped += (s, e) => {
+                    var fn = audioPicker.Items[audioPicker.SelectedIndex];
+                    DependencyService.Get<IAudio>().PlayAudioFile(fn);
+                };
+                audioPicker.GestureRecognizers.Add(gestureRecognizer);
+                audioPicker.BindingContext = new AudioNoteViewModel
+                {
+                    NoteList = recordings
+                };
                 ContactName.Text = qt.ContactName;
                 ContactNumber.Text = qt.ContactNumber;
                 price.Text = qt.Price.ToString();
@@ -206,7 +235,28 @@ namespace Extras.Views
             }
             return (bts, fnames);
         }
+        private void Record_Clicked(object sender, EventArgs e)
+        {
+            var nme = DateTime.Now.ToShortDateString() + ".wav";
+            audioFileName = nme.Replace("/", "-");
+            DependencyService.Get<IAudio>().RecordAudioFile(audioFileName + "(" + recordCount.ToString() + ")");
+            stopRecord.IsEnabled = true;
+            Record.IsEnabled = false;
+        }
 
+        private async void stopRecord_ClickedAsync(object sender, EventArgs e)
+        {
+            DependencyService.Get<IAudio>().StopAudioFile();
+            Audiorecorded = true;
+            stopRecord.IsEnabled = false;
+            Record.IsEnabled = true;
+            AudioNote an = new AudioNote();
+            an.ExtraId = jobId;
+            an.AudioNoteFileName = audioFileName + "(" + recordCount.ToString() + ")";
+            await App.Database.SaveAudioNoteAsync(an);
+            recordings.Add(an);
+            recordCount++;
+        }
         private long checkImageSize(List<string> images)
         {
             long allBytees = 0;
@@ -307,6 +357,18 @@ namespace Extras.Views
             MessagingCenter.Unsubscribe<App, List<string>>((App)Xamarin.Forms.Application.Current, "ImagesSelectedAndroid");
             MessagingCenter.Unsubscribe<App, List<string>>((App)Xamarin.Forms.Application.Current, "ImagesSelectediOS");
             GC.Collect();
+        }
+
+        private void audioPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var fn = audioPicker.Items[audioPicker.SelectedIndex];
+            DependencyService.Get<IAudio>().PlayAudioFile(fn);
+            //DependencyService.Get<IAudio>().StopPlayer();
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            var poo = "";
         }
     }
 }

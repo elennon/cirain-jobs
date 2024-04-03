@@ -119,6 +119,8 @@ C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Deb
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\GMImagePicker.Xamarin.dll
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\GMImagePicker.Xamarin.pdb
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Newtonsoft.Json.dll
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Plugin.AudioRecorder.dll
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Plugin.AudioRecorder.pdb
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Plugin.Permissions.dll
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Plugin.Permissions.pdb
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\BouncyCastle.Crypto.dll
@@ -142,6 +144,9 @@ C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Deb
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\WebP.Touch.dll
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Plugin.Media.dll
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Plugin.Media.pdb
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Plugin.SimpleAudioPlayer.Abstractions.dll
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Plugin.SimpleAudioPlayer.Abstractions.pdb
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Plugin.SimpleAudioPlayer.dll
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Plugin.Settings.Abstractions.dll
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Plugin.Settings.Abstractions.pdb
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Plugin.Settings.dll
@@ -196,6 +201,8 @@ C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Deb
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\zh-HK\Xamarin.Forms.Platform.iOS.resources.dll
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\zh-Hans\Xamarin.Forms.Platform.iOS.resources.dll
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Xamarin.Plugin.Calendar.dll
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Xamarin.Plugin.Calendar.pdb
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Extras.dll
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Extras.pdb
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
@@ -216,5 +223,3 @@ C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\obj\iPhone\Deb
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\obj\iPhone\Debug\Extras.iOS.csproj.CopyComplete
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\obj\iPhone\Debug\Extras.iOS.exe
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\obj\iPhone\Debug\Extras.iOS.pdb
-C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Xamarin.Plugin.Calendar.dll
-C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.iOS\bin\iPhone\Debug\Xamarin.Plugin.Calendar.pdb

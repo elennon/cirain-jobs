@@ -102,6 +102,25 @@
           }
         }
       },
+      "Plugin.AudioRecorder/1.1.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Xml",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Plugin.AudioRecorder.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.AudioRecorder.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Plugin.Permissions/6.0.1": {
         "type": "package",
         "dependencies": {
@@ -131,6 +150,22 @@
         "runtime": {
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Refractored.MvvmHelpers/1.6.2": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -362,6 +397,15 @@
           }
         }
       },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
       "WebP.Touch/1.0.8": {
         "type": "package",
         "compile": {
@@ -391,6 +435,25 @@
         "runtime": {
           "lib/xamarinios10/Plugin.Media.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugin.SimpleAudioPlayer/1.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {
+            "related": ".Abstractions.pdb;.XML"
+          }
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {
+            "related": ".Abstractions.pdb;.XML"
           }
         }
       },
@@ -645,11 +708,14 @@
           "CarouselView.FormsPlugin": "6.0.0",
           "GemBox.Spreadsheet": "49.0.1067",
           "Newtonsoft.Json": "13.0.1",
+          "Plugin.AudioRecorder": "1.1.0",
           "Plugin.Permissions": "6.0.1",
+          "Refractored.MvvmHelpers": "1.6.2",
           "SQLiteNetExtensions": "2.1.0",
           "SkiaSharp.Views.Forms": "2.88.0",
           "System.Drawing.Common": "6.0.0",
           "Xam.Plugin.Media": "5.0.1",
+          "Xam.Plugin.SimpleAudioPlayer": "1.6.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
@@ -766,6 +832,25 @@
           }
         }
       },
+      "Plugin.AudioRecorder/1.1.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Xml",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Plugin.AudioRecorder.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.AudioRecorder.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Plugin.Permissions/6.0.1": {
         "type": "package",
         "dependencies": {
@@ -795,6 +880,22 @@
         "runtime": {
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Refractored.MvvmHelpers/1.6.2": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -1004,6 +1105,15 @@
           }
         }
       },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
       "WebP.Touch/1.0.8": {
         "type": "package",
         "compile": {
@@ -1033,6 +1143,25 @@
         "runtime": {
           "lib/xamarinios10/Plugin.Media.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugin.SimpleAudioPlayer/1.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {
+            "related": ".Abstractions.pdb;.XML"
+          }
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {
+            "related": ".Abstractions.pdb;.XML"
           }
         }
       },
@@ -1287,11 +1416,14 @@
           "CarouselView.FormsPlugin": "6.0.0",
           "GemBox.Spreadsheet": "49.0.1067",
           "Newtonsoft.Json": "13.0.1",
+          "Plugin.AudioRecorder": "1.1.0",
           "Plugin.Permissions": "6.0.1",
+          "Refractored.MvvmHelpers": "1.6.2",
           "SQLiteNetExtensions": "2.1.0",
           "SkiaSharp.Views.Forms": "2.88.0",
           "System.Drawing.Common": "6.0.0",
           "Xam.Plugin.Media": "5.0.1",
+          "Xam.Plugin.SimpleAudioPlayer": "1.6.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
@@ -1408,6 +1540,25 @@
           }
         }
       },
+      "Plugin.AudioRecorder/1.1.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Xml",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Plugin.AudioRecorder.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.AudioRecorder.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Plugin.Permissions/6.0.1": {
         "type": "package",
         "dependencies": {
@@ -1437,6 +1588,22 @@
         "runtime": {
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Refractored.MvvmHelpers/1.6.2": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -1644,6 +1811,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
       "WebP.Touch/1.0.8": {
         "type": "package",
         "compile": {
@@ -1673,6 +1849,25 @@
         "runtime": {
           "lib/xamarinios10/Plugin.Media.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugin.SimpleAudioPlayer/1.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {
+            "related": ".Abstractions.pdb;.XML"
+          }
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {
+            "related": ".Abstractions.pdb;.XML"
           }
         }
       },
@@ -1927,11 +2122,14 @@
           "CarouselView.FormsPlugin": "6.0.0",
           "GemBox.Spreadsheet": "49.0.1067",
           "Newtonsoft.Json": "13.0.1",
+          "Plugin.AudioRecorder": "1.1.0",
           "Plugin.Permissions": "6.0.1",
+          "Refractored.MvvmHelpers": "1.6.2",
           "SQLiteNetExtensions": "2.1.0",
           "SkiaSharp.Views.Forms": "2.88.0",
           "System.Drawing.Common": "6.0.0",
           "Xam.Plugin.Media": "5.0.1",
+          "Xam.Plugin.SimpleAudioPlayer": "1.6.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
@@ -2048,6 +2246,25 @@
           }
         }
       },
+      "Plugin.AudioRecorder/1.1.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Xml",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Plugin.AudioRecorder.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.AudioRecorder.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Plugin.Permissions/6.0.1": {
         "type": "package",
         "dependencies": {
@@ -2077,6 +2294,22 @@
         "runtime": {
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Refractored.MvvmHelpers/1.6.2": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -2284,6 +2517,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
       "WebP.Touch/1.0.8": {
         "type": "package",
         "compile": {
@@ -2313,6 +2555,25 @@
         "runtime": {
           "lib/xamarinios10/Plugin.Media.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugin.SimpleAudioPlayer/1.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {
+            "related": ".Abstractions.pdb;.XML"
+          }
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {
+            "related": ".Abstractions.pdb;.XML"
           }
         }
       },
@@ -2567,11 +2828,14 @@
           "CarouselView.FormsPlugin": "6.0.0",
           "GemBox.Spreadsheet": "49.0.1067",
           "Newtonsoft.Json": "13.0.1",
+          "Plugin.AudioRecorder": "1.1.0",
           "Plugin.Permissions": "6.0.1",
+          "Refractored.MvvmHelpers": "1.6.2",
           "SQLiteNetExtensions": "2.1.0",
           "SkiaSharp.Views.Forms": "2.88.0",
           "System.Drawing.Common": "6.0.0",
           "Xam.Plugin.Media": "5.0.1",
+          "Xam.Plugin.SimpleAudioPlayer": "1.6.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
@@ -2688,6 +2952,25 @@
           }
         }
       },
+      "Plugin.AudioRecorder/1.1.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Core",
+          "System.Xml",
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Plugin.AudioRecorder.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.AudioRecorder.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Plugin.Permissions/6.0.1": {
         "type": "package",
         "dependencies": {
@@ -2717,6 +3000,22 @@
         "runtime": {
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Refractored.MvvmHelpers/1.6.2": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -2924,6 +3223,15 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
       "WebP.Touch/1.0.8": {
         "type": "package",
         "compile": {
@@ -2953,6 +3261,25 @@
         "runtime": {
           "lib/xamarinios10/Plugin.Media.dll": {
             "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugin.SimpleAudioPlayer/1.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {
+            "related": ".Abstractions.pdb;.XML"
+          }
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "related": ".pdb"
+          },
+          "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll": {
+            "related": ".Abstractions.pdb;.XML"
           }
         }
       },
@@ -3207,11 +3534,14 @@
           "CarouselView.FormsPlugin": "6.0.0",
           "GemBox.Spreadsheet": "49.0.1067",
           "Newtonsoft.Json": "13.0.1",
+          "Plugin.AudioRecorder": "1.1.0",
           "Plugin.Permissions": "6.0.1",
+          "Refractored.MvvmHelpers": "1.6.2",
           "SQLiteNetExtensions": "2.1.0",
           "SkiaSharp.Views.Forms": "2.88.0",
           "System.Drawing.Common": "6.0.0",
           "Xam.Plugin.Media": "5.0.1",
+          "Xam.Plugin.SimpleAudioPlayer": "1.6.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
@@ -3361,6 +3691,26 @@
         "packageIcon.png"
       ]
     },
+    "Plugin.AudioRecorder/1.1.0": {
+      "sha512": "qa8tAuqWeIKfnFLVKhGgaHhbtw7T2Ec/5smgJstyatQ97uViUIqAVTpzdyij11VOovxTGXO4xBBkYanJmzv21g==",
+      "type": "package",
+      "path": "plugin.audiorecorder/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid81/Plugin.AudioRecorder.dll",
+        "lib/monoandroid81/Plugin.AudioRecorder.pdb",
+        "lib/netcore50/Plugin.AudioRecorder.dll",
+        "lib/netcore50/Plugin.AudioRecorder.pdb",
+        "lib/netstandard2.0/Plugin.AudioRecorder.dll",
+        "lib/netstandard2.0/Plugin.AudioRecorder.pdb",
+        "lib/portable45-net45+win8+wpa81/Plugin.AudioRecorder.dll",
+        "lib/xamarinios10/Plugin.AudioRecorder.dll",
+        "lib/xamarinios10/Plugin.AudioRecorder.pdb",
+        "plugin.audiorecorder.1.1.0.nupkg.sha512",
+        "plugin.audiorecorder.nuspec"
+      ]
+    },
     "Plugin.Permissions/6.0.1": {
       "sha512": "na/0FNhyKmSicANWZMLSM0y/FW2AvLoawX3lsvBpELwP15sdJRyuBhRKk1OQjRoNrmTIewcON1tJFyydjMGWcA==",
       "type": "package",
@@ -3405,6 +3755,27 @@
         "lib/netstandard2.0/BouncyCastle.Crypto.xml",
         "portable.bouncycastle.1.8.9.nupkg.sha512",
         "portable.bouncycastle.nuspec"
+      ]
+    },
+    "Refractored.MvvmHelpers/1.6.2": {
+      "sha512": "pXiyT0ad3QI7IzZSSjVNliyhyyAe7lmNPdfAEgSrtjhF9twrYoKbBlTd58IJc67Fw8QmHEur8F9eBA4rj+BZAg==",
+      "type": "package",
+      "path": "refractored.mvvmhelpers/1.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net461/MvvmHelpers.dll",
+        "lib/net461/MvvmHelpers.pdb",
+        "lib/net461/MvvmHelpers.xml",
+        "lib/netstandard1.0/MvvmHelpers.dll",
+        "lib/netstandard1.0/MvvmHelpers.pdb",
+        "lib/netstandard1.0/MvvmHelpers.xml",
+        "lib/netstandard2.0/MvvmHelpers.dll",
+        "lib/netstandard2.0/MvvmHelpers.pdb",
+        "lib/netstandard2.0/MvvmHelpers.xml",
+        "refractored.mvvmhelpers.1.6.2.nupkg.sha512",
+        "refractored.mvvmhelpers.nuspec"
       ]
     },
     "SkiaSharp/2.88.0": {
@@ -3885,6 +4256,50 @@
         "version.txt"
       ]
     },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "WebP.Touch/1.0.8": {
       "sha512": "dvQaAn+m7cKL6k+evUilgikvrnk2qBm/h2lduAHFYIJFaJNIk9Z8pUI09gImzVKx5leUdvtLEzcLOOZAabspTA==",
       "type": "package",
@@ -3938,6 +4353,53 @@
         "readme.txt",
         "xam.plugin.media.5.0.1.nupkg.sha512",
         "xam.plugin.media.nuspec"
+      ]
+    },
+    "Xam.Plugin.SimpleAudioPlayer/1.6.0": {
+      "sha512": "y+ARGxKc+ABuLuzyuWPH3gXxJQJWwXSYMF+fAh8KlwvT7xGc0b/7uAb8kgPW5Yi+VaAHsdFhccAsy0qrQgupsQ==",
+      "type": "package",
+      "path": "xam.plugin.simpleaudioplayer/1.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.XML",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.dll",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.pdb",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.dll",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.pdb",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.pri",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.xml",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.dll",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.xml",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.XML",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.dll",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.xml",
+        "lib/net45/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/net45/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/net45/Plugin.SimpleAudioPlayer.WPF.dll",
+        "lib/net45/Plugin.SimpleAudioPlayer.WPF.pdb",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.deps.json",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.dll",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.pdb",
+        "lib/tizen4/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/tizen4/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/tizen4/Plugin.SimpleAudioPlayer.deps.json",
+        "lib/tizen4/Plugin.SimpleAudioPlayer.dll",
+        "xam.plugin.simpleaudioplayer.1.6.0.nupkg.sha512",
+        "xam.plugin.simpleaudioplayer.nuspec"
       ]
     },
     "Xam.Plugins.Settings/3.1.1": {

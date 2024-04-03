@@ -86,6 +86,26 @@
           }
         }
       },
+      "Plugin.AudioRecorder/1.1.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop",
+          "Mono.Android",
+          "System",
+          "System.Core",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/monoandroid81/Plugin.AudioRecorder.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid81/Plugin.AudioRecorder.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "Plugin.CurrentActivity/2.1.0.4": {
         "type": "package",
         "frameworkAssemblies": [
@@ -99,6 +119,26 @@
         "runtime": {
           "lib/monoandroid44/Plugin.CurrentActivity.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Plugin.MediaManager/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Xam.Plugins.Android.ExoPlayer": "2.11.8",
+          "Xam.Plugins.Android.ExoPlayer.MediaSession": "2.11.8"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/MediaManager.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid10.0/MediaManager.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -132,6 +172,22 @@
         "runtime": {
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Refractored.MvvmHelpers/1.6.2": {
+        "type": "package",
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -374,6 +430,15 @@
           }
         }
       },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        }
+      },
       "Xam.Plugin.Media/5.0.1": {
         "type": "package",
         "dependencies": {
@@ -390,6 +455,164 @@
         },
         "runtime": {
           "lib/monoandroid10.0/Plugin.Media.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugin.SimpleAudioPlayer/1.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "related": ".pdb"
+          },
+          "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.dll": {
+            "related": ".Abstractions.pdb;.pdb;.XML"
+          }
+        },
+        "runtime": {
+          "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.Abstractions.dll": {
+            "related": ".pdb"
+          },
+          "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.dll": {
+            "related": ".Abstractions.pdb;.pdb;.XML"
+          }
+        }
+      },
+      "Xam.Plugins.Android.ExoPlayer/2.11.8": {
+        "type": "package",
+        "dependencies": {
+          "Xam.Plugins.Android.ExoPlayer.Core": "2.11.8",
+          "Xam.Plugins.Android.ExoPlayer.Dash": "2.11.8",
+          "Xam.Plugins.Android.ExoPlayer.Hls": "2.11.8",
+          "Xam.Plugins.Android.ExoPlayer.SmoothStreaming": "2.11.8",
+          "Xam.Plugins.Android.ExoPlayer.UI": "2.11.8"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/ExoPlayer.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid10.0/ExoPlayer.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugins.Android.ExoPlayer.Core/2.11.8": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.AndroidX.Annotation": "1.1.0.1"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/ExoPlayer.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid10.0/ExoPlayer.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugins.Android.ExoPlayer.Dash/2.11.8": {
+        "type": "package",
+        "dependencies": {
+          "Xam.Plugins.Android.ExoPlayer.Core": "2.11.8"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/ExoPlayer.Dash.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid10.0/ExoPlayer.Dash.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugins.Android.ExoPlayer.Hls/2.11.8": {
+        "type": "package",
+        "dependencies": {
+          "Xam.Plugins.Android.ExoPlayer.Core": "2.11.8"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/ExoPlayer.Hls.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid10.0/ExoPlayer.Hls.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugins.Android.ExoPlayer.MediaSession/2.11.8": {
+        "type": "package",
+        "dependencies": {
+          "Xam.Plugins.Android.ExoPlayer.Core": "2.11.8",
+          "Xamarin.AndroidX.Media": "1.1.0.1"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/ExoPlayer.Ext.MediaSession.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid10.0/ExoPlayer.Ext.MediaSession.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugins.Android.ExoPlayer.SmoothStreaming/2.11.8": {
+        "type": "package",
+        "dependencies": {
+          "Xam.Plugins.Android.ExoPlayer.Core": "2.11.8"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/ExoPlayer.SmoothStreaming.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid10.0/ExoPlayer.SmoothStreaming.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Xam.Plugins.Android.ExoPlayer.UI/2.11.8": {
+        "type": "package",
+        "dependencies": {
+          "Xam.Plugins.Android.ExoPlayer.Core": "2.11.8",
+          "Xamarin.AndroidX.Media": "1.1.0.1"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/ExoPlayer.UI.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid10.0/ExoPlayer.UI.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -2271,11 +2494,14 @@
           "CarouselView.FormsPlugin": "6.0.0",
           "GemBox.Spreadsheet": "49.0.1067",
           "Newtonsoft.Json": "13.0.1",
+          "Plugin.AudioRecorder": "1.1.0",
           "Plugin.Permissions": "6.0.1",
+          "Refractored.MvvmHelpers": "1.6.2",
           "SQLiteNetExtensions": "2.1.0",
           "SkiaSharp.Views.Forms": "2.88.0",
           "System.Drawing.Common": "6.0.0",
           "Xam.Plugin.Media": "5.0.1",
+          "Xam.Plugin.SimpleAudioPlayer": "1.6.0",
           "Xam.Plugins.Settings": "3.1.1",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.FFImageLoading.Forms": "2.4.11.982",
@@ -2409,6 +2635,26 @@
         "packageIcon.png"
       ]
     },
+    "Plugin.AudioRecorder/1.1.0": {
+      "sha512": "qa8tAuqWeIKfnFLVKhGgaHhbtw7T2Ec/5smgJstyatQ97uViUIqAVTpzdyij11VOovxTGXO4xBBkYanJmzv21g==",
+      "type": "package",
+      "path": "plugin.audiorecorder/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid81/Plugin.AudioRecorder.dll",
+        "lib/monoandroid81/Plugin.AudioRecorder.pdb",
+        "lib/netcore50/Plugin.AudioRecorder.dll",
+        "lib/netcore50/Plugin.AudioRecorder.pdb",
+        "lib/netstandard2.0/Plugin.AudioRecorder.dll",
+        "lib/netstandard2.0/Plugin.AudioRecorder.pdb",
+        "lib/portable45-net45+win8+wpa81/Plugin.AudioRecorder.dll",
+        "lib/xamarinios10/Plugin.AudioRecorder.dll",
+        "lib/xamarinios10/Plugin.AudioRecorder.pdb",
+        "plugin.audiorecorder.1.1.0.nupkg.sha512",
+        "plugin.audiorecorder.nuspec"
+      ]
+    },
     "Plugin.CurrentActivity/2.1.0.4": {
       "sha512": "m8xaXvXUzBSqP6xRe5PeIG347WxsG/VWrZta7MnPpSvNuPf0RLB/S49UCCQyBKSsfu053+apvYm14BC7GU6Zzg==",
       "type": "package",
@@ -2420,6 +2666,49 @@
         "lib/monoandroid44/Plugin.CurrentActivity.xml",
         "plugin.currentactivity.2.1.0.4.nupkg.sha512",
         "plugin.currentactivity.nuspec",
+        "readme.txt"
+      ]
+    },
+    "Plugin.MediaManager/1.1.0": {
+      "sha512": "LORwWEKgRXnrN/gdnBhhZjko2/q/6zZmhiMKzw1L7Rue9luvHWaC55X8NoEMa4q6sS9yrkiVLXkMHR8C+XF/jg==",
+      "type": "package",
+      "path": "plugin.mediamanager/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/monoandroid10.0/MediaManager.dll",
+        "lib/monoandroid10.0/MediaManager.pdb",
+        "lib/monoandroid10.0/MediaManager.xml",
+        "lib/net472/MediaManager.dll",
+        "lib/net472/MediaManager.pdb",
+        "lib/net472/MediaManager.xml",
+        "lib/netcoreapp3.1/MediaManager.dll",
+        "lib/netcoreapp3.1/MediaManager.pdb",
+        "lib/netcoreapp3.1/MediaManager.xml",
+        "lib/netstandard2.0/MediaManager.dll",
+        "lib/netstandard2.0/MediaManager.pdb",
+        "lib/netstandard2.0/MediaManager.xml",
+        "lib/tizen40/MediaManager.dll",
+        "lib/tizen40/MediaManager.pdb",
+        "lib/tizen40/MediaManager.xml",
+        "lib/uap10.0.18362/MediaManager.dll",
+        "lib/uap10.0.18362/MediaManager.pdb",
+        "lib/uap10.0.18362/MediaManager.pri",
+        "lib/uap10.0.18362/MediaManager.xml",
+        "lib/uap10.0.18362/MediaManager/MediaManager.xr.xml",
+        "lib/xamarinios10/MediaManager.dll",
+        "lib/xamarinios10/MediaManager.pdb",
+        "lib/xamarinios10/MediaManager.xml",
+        "lib/xamarinmac20/MediaManager.dll",
+        "lib/xamarinmac20/MediaManager.pdb",
+        "lib/xamarinmac20/MediaManager.xml",
+        "lib/xamarintvos10/MediaManager.dll",
+        "lib/xamarintvos10/MediaManager.pdb",
+        "lib/xamarintvos10/MediaManager.xml",
+        "plugin.mediamanager.1.1.0.nupkg.sha512",
+        "plugin.mediamanager.nuspec",
         "readme.txt"
       ]
     },
@@ -2467,6 +2756,27 @@
         "lib/netstandard2.0/BouncyCastle.Crypto.xml",
         "portable.bouncycastle.1.8.9.nupkg.sha512",
         "portable.bouncycastle.nuspec"
+      ]
+    },
+    "Refractored.MvvmHelpers/1.6.2": {
+      "sha512": "pXiyT0ad3QI7IzZSSjVNliyhyyAe7lmNPdfAEgSrtjhF9twrYoKbBlTd58IJc67Fw8QmHEur8F9eBA4rj+BZAg==",
+      "type": "package",
+      "path": "refractored.mvvmhelpers/1.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net461/MvvmHelpers.dll",
+        "lib/net461/MvvmHelpers.pdb",
+        "lib/net461/MvvmHelpers.xml",
+        "lib/netstandard1.0/MvvmHelpers.dll",
+        "lib/netstandard1.0/MvvmHelpers.pdb",
+        "lib/netstandard1.0/MvvmHelpers.xml",
+        "lib/netstandard2.0/MvvmHelpers.dll",
+        "lib/netstandard2.0/MvvmHelpers.pdb",
+        "lib/netstandard2.0/MvvmHelpers.xml",
+        "refractored.mvvmhelpers.1.6.2.nupkg.sha512",
+        "refractored.mvvmhelpers.nuspec"
       ]
     },
     "SkiaSharp/2.88.0": {
@@ -2960,6 +3270,50 @@
         "version.txt"
       ]
     },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "Xam.Plugin.Media/5.0.1": {
       "sha512": "UUR31EEnhDVa4IXgVfQIAL3u9v6YAyppsb5UlO9MNJ4quGGkfcWX++JexjB1nMGqvCzsjAT2t32drKDIXoW4SQ==",
       "type": "package",
@@ -2998,6 +3352,158 @@
         "readme.txt",
         "xam.plugin.media.5.0.1.nupkg.sha512",
         "xam.plugin.media.nuspec"
+      ]
+    },
+    "Xam.Plugin.SimpleAudioPlayer/1.6.0": {
+      "sha512": "y+ARGxKc+ABuLuzyuWPH3gXxJQJWwXSYMF+fAh8KlwvT7xGc0b/7uAb8kgPW5Yi+VaAHsdFhccAsy0qrQgupsQ==",
+      "type": "package",
+      "path": "xam.plugin.simpleaudioplayer/1.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.XML",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.dll",
+        "lib/MonoAndroid10/Plugin.SimpleAudioPlayer.pdb",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.dll",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.pdb",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.pri",
+        "lib/UAP10/Plugin.SimpleAudioPlayer.xml",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.dll",
+        "lib/Xamarin.Mac20/Plugin.SimpleAudioPlayer.xml",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.XML",
+        "lib/Xamarin.iOS10/Plugin.SimpleAudioPlayer.dll",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.dll",
+        "lib/Xamarintvos/Plugin.SimpleAudioPlayer.xml",
+        "lib/net45/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/net45/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/net45/Plugin.SimpleAudioPlayer.WPF.dll",
+        "lib/net45/Plugin.SimpleAudioPlayer.WPF.pdb",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.deps.json",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.dll",
+        "lib/netstandard1.0/Plugin.SimpleAudioPlayer.pdb",
+        "lib/tizen4/Plugin.SimpleAudioPlayer.Abstractions.dll",
+        "lib/tizen4/Plugin.SimpleAudioPlayer.Abstractions.pdb",
+        "lib/tizen4/Plugin.SimpleAudioPlayer.deps.json",
+        "lib/tizen4/Plugin.SimpleAudioPlayer.dll",
+        "xam.plugin.simpleaudioplayer.1.6.0.nupkg.sha512",
+        "xam.plugin.simpleaudioplayer.nuspec"
+      ]
+    },
+    "Xam.Plugins.Android.ExoPlayer/2.11.8": {
+      "sha512": "QhXsquw4z8KlKI5q4j/fiQeJrYXlxvr7ZxSaZV6WYCoB2fmoatNV8ezVJu3dCtt3cXRNuzZQfBjIX4p3hTQnuw==",
+      "type": "package",
+      "path": "xam.plugins.android.exoplayer/2.11.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/ExoPlayer.dll",
+        "lib/monoandroid10.0/ExoPlayer.pdb",
+        "lib/monoandroid10.0/ExoPlayer.xml",
+        "readme.txt",
+        "xam.plugins.android.exoplayer.2.11.8.nupkg.sha512",
+        "xam.plugins.android.exoplayer.nuspec"
+      ]
+    },
+    "Xam.Plugins.Android.ExoPlayer.Core/2.11.8": {
+      "sha512": "lltGD91Y9CKa1jhULE3+aTGkUt9ouE/3bDhxbs9FEek3/SWbTmq5LAy+EHuZ+vwQqLLTRbf89gKGWPgp0bzrpA==",
+      "type": "package",
+      "path": "xam.plugins.android.exoplayer.core/2.11.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/ExoPlayer.Core.dll",
+        "lib/monoandroid10.0/ExoPlayer.Core.pdb",
+        "lib/monoandroid10.0/ExoPlayer.Core.xml",
+        "readme.txt",
+        "xam.plugins.android.exoplayer.core.2.11.8.nupkg.sha512",
+        "xam.plugins.android.exoplayer.core.nuspec"
+      ]
+    },
+    "Xam.Plugins.Android.ExoPlayer.Dash/2.11.8": {
+      "sha512": "87vsjH0mxgdU/t04mjAJSgd85fHHULXCkk9+QHBEBqSeb+Ay2kdGp7KiuIVTXvIXfWCJ1i8G8tiJmWKezuspfA==",
+      "type": "package",
+      "path": "xam.plugins.android.exoplayer.dash/2.11.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/ExoPlayer.Dash.dll",
+        "lib/monoandroid10.0/ExoPlayer.Dash.pdb",
+        "lib/monoandroid10.0/ExoPlayer.Dash.xml",
+        "readme.txt",
+        "xam.plugins.android.exoplayer.dash.2.11.8.nupkg.sha512",
+        "xam.plugins.android.exoplayer.dash.nuspec"
+      ]
+    },
+    "Xam.Plugins.Android.ExoPlayer.Hls/2.11.8": {
+      "sha512": "RzV/k99ExClslHGldSc22GqKXoquNvWdfiGTAKHBlQy4mVUcxiDv4J9Uc8ewRl+d4PxwnFLftNEW4Xt3SqFQsg==",
+      "type": "package",
+      "path": "xam.plugins.android.exoplayer.hls/2.11.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/ExoPlayer.Hls.dll",
+        "lib/monoandroid10.0/ExoPlayer.Hls.pdb",
+        "lib/monoandroid10.0/ExoPlayer.Hls.xml",
+        "readme.txt",
+        "xam.plugins.android.exoplayer.hls.2.11.8.nupkg.sha512",
+        "xam.plugins.android.exoplayer.hls.nuspec"
+      ]
+    },
+    "Xam.Plugins.Android.ExoPlayer.MediaSession/2.11.8": {
+      "sha512": "RAvmeWVjvjNDeM7EzqhpjbBdQY+TCZjPhKzpUqimW8bhrZTzHJ7dyynaN8eBKvjqD0yJY85WmNIhHRhScy09Tg==",
+      "type": "package",
+      "path": "xam.plugins.android.exoplayer.mediasession/2.11.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/ExoPlayer.Ext.MediaSession.dll",
+        "lib/monoandroid10.0/ExoPlayer.Ext.MediaSession.pdb",
+        "lib/monoandroid10.0/ExoPlayer.Ext.MediaSession.xml",
+        "readme.txt",
+        "xam.plugins.android.exoplayer.mediasession.2.11.8.nupkg.sha512",
+        "xam.plugins.android.exoplayer.mediasession.nuspec"
+      ]
+    },
+    "Xam.Plugins.Android.ExoPlayer.SmoothStreaming/2.11.8": {
+      "sha512": "ZecEs6ZbUI843D65rth+nplaZlglI5SpeksaTzpW+hi3A+y5gvYROuk3cLhyqmbiCgi50/PrTZh0wTvuEqVmTQ==",
+      "type": "package",
+      "path": "xam.plugins.android.exoplayer.smoothstreaming/2.11.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/ExoPlayer.SmoothStreaming.dll",
+        "lib/monoandroid10.0/ExoPlayer.SmoothStreaming.pdb",
+        "lib/monoandroid10.0/ExoPlayer.SmoothStreaming.xml",
+        "readme.txt",
+        "xam.plugins.android.exoplayer.smoothstreaming.2.11.8.nupkg.sha512",
+        "xam.plugins.android.exoplayer.smoothstreaming.nuspec"
+      ]
+    },
+    "Xam.Plugins.Android.ExoPlayer.UI/2.11.8": {
+      "sha512": "PQN2raY7zw/sipc+SZhIa8T2lRpQDQzYYmHcJh7i0Fev2aHFMfV/YAuj/ScgwtNHr6gZsmizJ2S9sR2MminoLA==",
+      "type": "package",
+      "path": "xam.plugins.android.exoplayer.ui/2.11.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid10.0/ExoPlayer.UI.dll",
+        "lib/monoandroid10.0/ExoPlayer.UI.pdb",
+        "lib/monoandroid10.0/ExoPlayer.UI.xml",
+        "readme.txt",
+        "xam.plugins.android.exoplayer.ui.2.11.8.nupkg.sha512",
+        "xam.plugins.android.exoplayer.ui.nuspec"
       ]
     },
     "Xam.Plugins.Settings/3.1.1": {
@@ -4792,6 +5298,7 @@
       "GemBox.Spreadsheet >= 49.0.1067",
       "Newtonsoft.Json >= 13.0.1",
       "Plugin.CurrentActivity >= 2.1.0.4",
+      "Plugin.MediaManager >= 1.1.0",
       "SQLiteNetExtensions >= 2.1.0",
       "SkiaSharp.Views.Forms >= 2.88.0",
       "System.Drawing.Common >= 6.0.0",
@@ -4850,21 +5357,9 @@
             "target": "Package",
             "version": "[7.2.0.564, )"
           },
-          "Acr.UserDialogs": {
-            "target": "Package",
-            "version": "[7.2.0.564, )"
-          },
           "CarouselView.FormsPlugin": {
             "target": "Package",
             "version": "[6.0.0, )"
-          },
-          "CarouselView.FormsPlugin": {
-            "target": "Package",
-            "version": "[6.0.0, )"
-          },
-          "GemBox.Spreadsheet": {
-            "target": "Package",
-            "version": "[49.0.1067, )"
           },
           "GemBox.Spreadsheet": {
             "target": "Package",
@@ -4874,21 +5369,13 @@
             "target": "Package",
             "version": "[13.0.1, )"
           },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "[13.0.1, )"
-          },
           "Plugin.CurrentActivity": {
             "target": "Package",
             "version": "[2.1.0.4, )"
           },
-          "Plugin.CurrentActivity": {
+          "Plugin.MediaManager": {
             "target": "Package",
-            "version": "[2.1.0.4, )"
-          },
-          "SQLiteNetExtensions": {
-            "target": "Package",
-            "version": "[2.1.0, )"
+            "version": "[1.1.0, )"
           },
           "SQLiteNetExtensions": {
             "target": "Package",
@@ -4898,21 +5385,9 @@
             "target": "Package",
             "version": "[2.88.0, )"
           },
-          "SkiaSharp.Views.Forms": {
-            "target": "Package",
-            "version": "[2.88.0, )"
-          },
           "System.Drawing.Common": {
             "target": "Package",
             "version": "[6.0.0, )"
-          },
-          "System.Drawing.Common": {
-            "target": "Package",
-            "version": "[6.0.0, )"
-          },
-          "Xam.Plugin.Media": {
-            "target": "Package",
-            "version": "[5.0.1, )"
           },
           "Xam.Plugin.Media": {
             "target": "Package",
@@ -4922,21 +5397,9 @@
             "target": "Package",
             "version": "[3.1.1, )"
           },
-          "Xam.Plugins.Settings": {
-            "target": "Package",
-            "version": "[3.1.1, )"
-          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.3, )"
-          },
-          "Xamarin.Essentials": {
-            "target": "Package",
-            "version": "[1.7.3, )"
-          },
-          "Xamarin.FFImageLoading.Forms": {
-            "target": "Package",
-            "version": "[2.4.11.982, )"
           },
           "Xamarin.FFImageLoading.Forms": {
             "target": "Package",
@@ -4946,21 +5409,9 @@
             "target": "Package",
             "version": "[5.0.0.2515, )"
           },
-          "Xamarin.Forms": {
-            "target": "Package",
-            "version": "[5.0.0.2515, )"
-          },
           "Xamarin.Plugin.Calendar": {
             "target": "Package",
             "version": "[2.0.9699, )"
-          },
-          "Xamarin.Plugin.Calendar": {
-            "target": "Package",
-            "version": "[2.0.9699, )"
-          },
-          "sqlite-net-pcl": {
-            "target": "Package",
-            "version": "[1.8.116, )"
           },
           "sqlite-net-pcl": {
             "target": "Package",

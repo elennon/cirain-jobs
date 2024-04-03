@@ -18,6 +18,11 @@ using Plugin.Permissions;
 using Extras.Views;
 using Acr.UserDialogs;
 using AndroidX.AppCompat.App;
+using AndroidX.Core.App;
+using AndroidX.Core.Content;
+using Android;
+using MediaManager;
+using static Android.Provider.MediaStore;
 
 namespace Extras.Droid
     
@@ -45,6 +50,15 @@ namespace Extras.Droid
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: false);
             UserDialogs.Init(this);
             AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
+
+            //if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.RecordAudio) != Permission.Granted)
+            //{
+            //    ActivityCompat.RequestPermissions(this, new String[] { Manifest.Permission.RecordAudio }, 1);
+            //}
+            //List<string> nts = new List<string>();
+            //nts.Add("dog");
+            ////MessagingCenter.Send((App)Xamarin.Forms.Application.Current, "AudioNote", nts);
+            //MessagingCenter.Send<App, List<string>>((App)Xamarin.Forms.Application.Current, "AudioNote", nts);
         }
 
         // Field, property, and method for Picture Picker
@@ -94,8 +108,8 @@ namespace Extras.Droid
                     }
 
                     //Send our images to the carousel view.
+                    var ft = (App)Xamarin.Forms.Application.Current;
                     MessagingCenter.Send<App, List<string>>((App)Xamarin.Forms.Application.Current, "ImagesSelectedAndroid", images);
-                    //MessagingCenter.Send<pics, List<string>>((App)Xamarin.Forms.Application.Current.MainPage, "ImagesSelectedAndroid", images);
                 }
             }
 

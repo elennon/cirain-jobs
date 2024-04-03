@@ -11,6 +11,10 @@ using Extras.Services;
 using Plugin.Permissions.Abstractions;
 using System.Reflection;
 using System.IO.Compression;
+using Extras.ViewModels;
+using Extras.Helpers;
+using System.Text;
+using System.Linq;
 
 namespace Extras.Views
 {
@@ -19,11 +23,15 @@ namespace Extras.Views
     {
         private string AppFolder => Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         public List<string> Pics { get; set; }
+        public List<string> notes { get; set; }
+        private bool Audiorecorded = false;
+        private string audioFileName;
         public NewExtra()
         {
             InitializeComponent();
             BindingContext = new Extra();
             Device.BeginInvokeOnMainThread(async () => await AskForPermissions());
+            stopRecord.IsEnabled = false;
         }
 
         protected override void OnAppearing()
@@ -32,7 +40,6 @@ namespace Extras.Views
             //exDate.Date = DateTime.Today;
             
         }
-        
         async void OnSaveButtonClicked(object sender, EventArgs e)
         {
             try
@@ -59,6 +66,16 @@ namespace Extras.Views
                 ext.Comments = (comments.Text == null) ? string.Empty : comments.Text;
                 ext.Price = Convert.ToInt16(price.Text);
                 var iid = App.Database.SaveExtraAsync(ext);
+                if (Audiorecorded)
+                {
+                    if (audioFileName != string.Empty || audioFileName != null)
+                    {
+                        AudioNote an = new AudioNote();
+                        an.ExtraId = ext.MyId;
+                        an.AudioNoteFileName = audioFileName;
+                        await App.Database.SaveAudioNoteAsync(an);
+                    }
+                }
                 if (Pics != null)
                 {
                     var piks = getPics(Pics);
@@ -75,9 +92,10 @@ namespace Extras.Views
                         counter++;
                     }
                 }
+
                 await DisplayAlert("Saved!", "", "OK");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 await DisplayAlert("Alert", "Exception: " + e.ToString(), "OK");
             }
@@ -247,13 +265,18 @@ namespace Extras.Views
 
                 var storagePermissions = await CrossPermissions.Current.CheckPermissionStatusAsync<StoragePermission>();
                 var photoPermissions = await CrossPermissions.Current.CheckPermissionStatusAsync<PhotosPermission>();
+                var audioPermissions = await CrossPermissions.Current.CheckPermissionStatusAsync<MicrophonePermission>();
                 if (storagePermissions != PermissionStatus.Granted || photoPermissions != PermissionStatus.Granted)
                 {
                     storagePermissions = await CrossPermissions.Current.RequestPermissionAsync<StoragePermission>();
-                    photoPermissions = await CrossPermissions.Current.RequestPermissionAsync<PhotosPermission>();
+                    photoPermissions = await CrossPermissions.Current.RequestPermissionAsync<PhotosPermission>();                    
+                }
+                if (audioPermissions != PermissionStatus.Granted)
+                {                   
+                    audioPermissions = await CrossPermissions.Current.RequestPermissionAsync<MicrophonePermission>();
                 }
 
-                if (storagePermissions != PermissionStatus.Granted || photoPermissions != PermissionStatus.Granted)
+                if (storagePermissions != PermissionStatus.Granted || photoPermissions != PermissionStatus.Granted || audioPermissions != PermissionStatus.Granted)
                 {
                     await DisplayAlert("Permissions Denied!", "Please go to your app settings and enable permissions.", "Ok");
                     return false;
@@ -279,6 +302,24 @@ namespace Extras.Views
             MessagingCenter.Unsubscribe<App, List<string>>((App)Xamarin.Forms.Application.Current, "ImagesSelectedAndroid");
             MessagingCenter.Unsubscribe<App, List<string>>((App)Xamarin.Forms.Application.Current, "ImagesSelectediOS");
             GC.Collect();
+        }
+
+        private async void Record_ClickedAsync(object sender, EventArgs e)
+        {
+            var nme = DateTime.Now.ToShortDateString() + ".wav";
+            audioFileName = nme.Replace("/", "-");
+            DependencyService.Get<IAudio>().RecordAudioFile(audioFileName);
+            stopRecord.IsEnabled = true;
+            Record.IsEnabled = false;
+            await DisplayAlert("Alert", "You have been alerted", "");
+        }
+
+        private void stopRecord_Clicked(object sender, EventArgs e)
+        {           
+            DependencyService.Get<IAudio>().StopAudioFile();            
+            Audiorecorded = true;
+            stopRecord.IsEnabled = false;
+            Record.IsEnabled = true;
         }
     }
 }
