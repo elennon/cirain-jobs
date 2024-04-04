@@ -12,6 +12,7 @@ using System.Linq;
 using System.IO.Compression;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
+using Extras.ViewModels;
 
 namespace Extras.Views
 {
@@ -27,12 +28,26 @@ namespace Extras.Views
         {
             InitializeComponent();
             BindingContext = new Extra();
+            statusPicker.BindingContext = new StatusViewModel
+            {
+                JobList = GetStatus()
+            };
+
+        }
+        private List<Status> GetStatus()
+        {
+            return new List<Status>()
+                {
+                new Status("Pending", "Pending"),
+                new Status("Started", "Started"),
+                new Status("Finished", "Finished")
+                };
         }
         protected override async void OnAppearing()
         {
             base.OnAppearing();
             extrs = await App.Database.GetExtrasAsync();
-            myCollection = new ObservableCollection<Extra>(extrs);
+            myCollection = new ObservableCollection<Extra>(extrs);           
             collectionView.ItemsSource = myCollection.Where(x => x.Status == "Started");
         }
         private async Task<string> GetPw(string key)
@@ -116,6 +131,24 @@ namespace Extras.Views
                 return false;
 
             return EmailRegex.IsMatch(email);
+        }
+
+        private void statusPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var status = "";
+            switch (statusPicker.SelectedIndex)
+            {
+                case 0:
+                    status = "Pending";
+                    break;
+                case 1:
+                    status = "Started";
+                    break;
+                case 2:
+                    status = "Finished";
+                    break;
+            }
+            collectionView.ItemsSource = myCollection.Where(x => x.Status == status);
         }
     }
 }

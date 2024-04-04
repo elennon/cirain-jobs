@@ -31,6 +31,8 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
+            <Picker x:Name="statusPicker" ItemsSource="{Binding JobList}" ItemDisplayBinding="{Binding StausName}" SelectedIndexChanged="statusPicker_SelectedIndexChanged"
+                    SelectedItem="{Binding SelectedJob}" HorizontalOptions="EndAndExpand" WidthRequest="200" Title="started jobs.."/>
             <Label x:Name="emptyLabel" IsVisible="false" Style="{StaticResource labelDarkStyle}" VerticalTextAlignment="Center" Margin="8"/>
             <ScrollView VerticalScrollBarVisibility="Always">
                 <CollectionView x:Name="collectionView" SelectionMode="Single" 
@@ -72,7 +74,7 @@
                         <ContentView>
                             <StackLayout HorizontalOptions="CenterAndExpand"
                              VerticalOptions="StartAndExpand">
-                                <Label Text="No Extras have been saved yet. If you go back to the 'New Extra page', fill in the fields and click save the the top right hand side. That will move that extra here, ready to be sent."
+                                <Label Text="No Jobs for the selected status"
                                    Margin="10,25,10,10"                          
                                    FontSize="18"
                                    HorizontalOptions="Fill"

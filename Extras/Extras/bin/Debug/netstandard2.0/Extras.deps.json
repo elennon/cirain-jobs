@@ -16,6 +16,7 @@
           "Newtonsoft.Json": "13.0.1",
           "Plugin.AudioRecorder": "1.1.0",
           "Plugin.Permissions": "6.0.1",
+          "Refractored.MvvmHelpers": "1.6.2",
           "SQLiteNetExtensions": "2.1.0",
           "SkiaSharp.Views.Forms": "2.88.0",
           "System.Drawing.Common": "6.0.0",
@@ -99,6 +100,17 @@
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
             "assemblyVersion": "1.8.9.0",
             "fileVersion": "1.8.9.1"
+          }
+        }
+      },
+      "Refractored.MvvmHelpers/1.6.2": {
+        "dependencies": {
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MvvmHelpers.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -238,6 +250,7 @@
           }
         }
       },
+      "System.ValueTuple/4.5.0": {},
       "Xam.Plugin.Media/5.0.1": {
         "dependencies": {
           "Xamarin.Essentials": "1.7.3"
@@ -412,6 +425,13 @@
       "path": "portable.bouncycastle/1.8.9",
       "hashPath": "portable.bouncycastle.1.8.9.nupkg.sha512"
     },
+    "Refractored.MvvmHelpers/1.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pXiyT0ad3QI7IzZSSjVNliyhyyAe7lmNPdfAEgSrtjhF9twrYoKbBlTd58IJc67Fw8QmHEur8F9eBA4rj+BZAg==",
+      "path": "refractored.mvvmhelpers/1.6.2",
+      "hashPath": "refractored.mvvmhelpers.1.6.2.nupkg.sha512"
+    },
     "SkiaSharp/2.88.0": {
       "type": "package",
       "serviceable": true,
@@ -523,6 +543,13 @@
       "sha512": "sha512-NyscU59xX6Uo91qvhOs2Ccho3AR2TnZPomo1Z0K6YpyztBPM/A5VbkzOO19sy3A3i1TtEnTxA7bCe3Us+r5MWg==",
       "path": "system.text.encoding.codepages/5.0.0",
       "hashPath": "system.text.encoding.codepages.5.0.0.nupkg.sha512"
+    },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
     "Xam.Plugin.Media/5.0.1": {
       "type": "package",

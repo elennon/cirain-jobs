@@ -25,6 +25,7 @@ public class MonoPackageManager_Resources {
 		"FormsViewGroup.dll",
 		"GemBox.Spreadsheet.dll",
 		"MediaManager.dll",
+		"MvvmHelpers.dll",
 		"Newtonsoft.Json.dll",
 		"Plugin.AudioRecorder.dll",
 		"Plugin.CurrentActivity.dll",

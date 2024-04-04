@@ -1657,3 +1657,5 @@ C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.Android\obj\Debug\
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.Android\obj\Debug\120\android\src\mono\com\google\android\exoplayer2\video\VideoFrameMetadataListenerImplementor.java
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.Android\obj\Debug\120\android\src\mono\com\google\android\exoplayer2\video\VideoListenerImplementor.java
 C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.Android\obj\Debug\120\android\src\mono\com\google\android\exoplayer2\video\VideoRendererEventListenerImplementor.java
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.Android\obj\Debug\120\android\assets\MvvmHelpers.dll
+C:\Users\Asus\Documents\c# projects\Cirain-jobs\Extras\Extras.Android\obj\Debug\120\android\assets\MvvmHelpers.pdb
